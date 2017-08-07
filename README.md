@@ -3,7 +3,13 @@ CryptoPro CSP 4 в контенере
 Контейнер включающий в себя:  
 CryptoPro CSP 4 полностью запускаемый как криптопровайдер.  
 PHP расширение для работы с подписями через интерфейсы CryptoPro CSP 4  
-Небольшое API для работы с подписями по http  
+Небольшое API для работы с подписями по http
+ 
+Лицензия CryptoPro CSP 4
+------------------------
+При установке CryptoPro автоматически выдается лицензия на тестовый период 3 месяца.
+Необходимо установить нормальную лицензию.  
+По лицензированию и докеру можно почитать на форуме https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=12149.
 
 Зачем это нужно
 ---------------
@@ -76,3 +82,21 @@ GUC.crt качается тут https://e-trust.gosuslugi.ru/MainCA
 Описание API
 -----------
 В работе
+
+Ссылки которые очень помогли
+----------------------------
+Инструкция по установке  
+https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=11300  
+
+По установке плагина  
+http://www.cryptopro.ru/forum2/default.aspx?g=posts&t=10928  
+https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=11540
+
+Плагин для PHP7  
+https://www.cryptopro.ru/forum2/default.aspx?g=posts&m=82396#post82396  
+
+Инструкция тестовый сертификат  
+http://pushorigin.ru/cryptopro/test-cert-crypto-pro  
+
+Установка плагина в FireFox 53^  
+https://support.cryptopro.ru/index.php?/Knowledgebase/Article/View/223/0/podderzhk-npapi-plginov-v-firefox-versii-53-i-vyshe  
