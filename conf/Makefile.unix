@@ -1,0 +1,30 @@
+PHPDIR=/root/php-5.6.30
+PHPINCLUDE=-I$(PHPDIR) -I$(PHPDIR)/main -I$(PHPDIR)/Zend -I$(PHPDIR)/TSRM 
+#CAN BE LINUX, FREEBSD, AIX
+PLATFORM_FLAGS=-DLINUX
+CFLAGS=$(PLATFORM_FLAGS)  -DUNIX -DHAVE_LIMITS_H $(ARCH_FLAGS) $(add_CPPFLAGS) -I$(CSP_INCLUDE)/\
+-I$(CSP_INCLUDE)/cpcsp -I$(CSP_INCLUDE)/pki -I$(CSP_INCLUDE)/pki/atl \
+-I$(CSP_INCLUDE)/pki/cppcades -I$(CSP_INCLUDE)/pki/cplib $(PHPINCLUDE)\
+-DSIZEOF_VOID_P=$(SIZEOF_VOID_P) -fPIC -DPIC
+LDFLAGS= $(ARCH_FLAGS) -L$(CSP_LIB) -lcppcades -lcapi10 -lcapi20 -lrdrsup -lcplib $(add_ldflags) -g
+
+SOURCES=\
+	PHPCadesCPSigners.cpp PHPCadesCPSigner.cpp PHPCadesCPExtendedKeyUsage.cpp\
+	PHPCadesCPAttribute.cpp PHPCadesCPEKU.cpp PHPCadesCPEKUs.cpp PHPCadesCPBasicConstraints.cpp\
+	PHPCadesCPSignedData.cpp PHPCadesCPPublicKey.cpp PHPCadesCPPrivateKey.cpp PHPCadesCPOID.cpp\
+	PHPCadesCPEncodedData.cpp PHPCadesCPAttributes.cpp PHPCadesCPCertificateStatus.cpp\
+	PHPCadesCPEnvelopedData.cpp PHPCadesCPAlgorithm.cpp PHPCadesCPRecipients.cpp PHPCadesCPKeyUsage.cpp\
+	PHPCadesAbout.cpp PHPCadesCPCardholderData.cpp PHPCadesCPCertificates.cpp PHPCadesCPSignedXML.cpp\
+	PHPCadesCPHashedData.cpp PHPCadesCPRawSignature.cpp PHPCadesCPCertificate.cpp PHPCadesCPStore.cpp dllmain.cpp \
+	PHPCadesVersion.cpp PHPCadesSymmetricAlgorithm.cpp errormsg.cpp
+
+OBJ=$(SOURCES:.cpp=.o)
+OUT=libphpcades.so
+.SUFFIXES: .cpp
+
+$(OUT): $(OBJ)
+	$(CXX) -shared $(OBJ) $(LDFLAGS) -o $@ $(add_libs)
+clean:
+	rm -rf *.o *.so
+.cpp.o:
+	$(CXX) $(CFLAGS) -c -o $@ $<

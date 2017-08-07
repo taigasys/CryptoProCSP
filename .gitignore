@@ -1,0 +1,4 @@
+.idea
+/www/test_certs
+/dist
+^/dist/GUC.crt

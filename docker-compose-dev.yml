@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+
+  cprocsp:
+    container_name: garanteka_cprocsp
+    privileged: true
+    tmpfs:
+      /run
+      /run/lock
+    security_opt:
+      - seccomp:unconfined
+    build:
+      context: .
+      dockerfile: config/Dockerfile-cprocsp
+    ports:
+     - 8185:80
+    volumes:
+     - ./www:/www
+     - /sys/fs/cgroup:/sys/fs/cgroup:ro
