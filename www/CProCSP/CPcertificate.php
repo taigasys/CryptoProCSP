@@ -3,7 +3,28 @@
 namespace CProCSP;
 
 /**
- * Class CPSigners Описывает сертификат открытого ключа. Реализует интерфейс,
+ * Глобальные константы плагина используемые методом CPcertificate::GetInfo
+ * @var int CERT_INFO_SUBJECT_SIMPLE_NAME Краткое имя владельца сертификата Returns the display name from the certificate subject.
+ * @var int CERT_INFO_ISSUER_SIMPLE_NAME Краткое имя издятеля сертификата Returns the display name of the issuer of the certificate.
+ * @var int CERT_INFO_SUBJECT_EMAIL_NAME Returns the email address of the certificate subject.
+ * @var int CERT_INFO_ISSUER_EMAIL_NAME Returns the email address of the issuer of the certificate.
+ * @var int CERT_INFO_SUBJECT_UPN Returns the UPN of the certificate subject. Introduced in CAPICOM 2.0.
+ * @var int CERT_INFO_ISSUER_UPN Returns the UPN of the issuer of the certificate. Introduced in CAPICOM 2.0.
+ * @var int CERT_INFO_SUBJECT_DNS_NAME Returns the DNS name of the certificate subject. Introduced in CAPICOM 2.0.
+ * @var int CERT_INFO_ISSUER_DNS_NAME Returns the DNS name of the issuer of the certificate. Introduced in CAPICOM 2.0.
+ */
+const CERT_INFO_SUBJECT_SIMPLE_NAME = 0;
+const CERT_INFO_ISSUER_SIMPLE_NAME = 1;
+const CERT_INFO_SUBJECT_EMAIL_NAME = 2;
+const CERT_INFO_ISSUER_EMAIL_NAME = 3;
+const CERT_INFO_SUBJECT_UPN = 4;
+const CERT_INFO_ISSUER_UPN = 5;
+const CERT_INFO_SUBJECT_DNS_NAME = 6;
+const CERT_INFO_ISSUER_DNS_NAME = 7;
+
+/**
+ * Только описание! Для автокомплитов IDE и справки
+ * CPSigners класс плагина сертификат открытого ключа. Реализует интерфейс,
  * аналогичный интерфейсу объекта CAPICOM.Certificate .
  *
  * В отличие от объекта Microsoft CAPICOM.Certificate , для данного объекта реализованы только следующие методы и свойства:
@@ -15,33 +36,6 @@ namespace CProCSP;
  */
 class CPcertificate
 {
-
-    /**
-     * Константы используемые методом CPcertificate::GetInfo
-     */
-    /** @var int Краткое имя владельца сертификата Returns the display name from the certificate subject. */
-    const CERT_INFO_SUBJECT_SIMPLE_NAME = 0;
-
-    /** @var int Краткое имя издятеля сертификата Returns the display name of the issuer of the certificate. */
-    const CERT_INFO_ISSUER_SIMPLE_NAME = 1;
-
-    /** @var int  Returns the email address of the certificate subject. */
-    const CERT_INFO_SUBJECT_EMAIL_NAME = 2;
-
-    /** @var int  Returns the email address of the issuer of the certificate. */
-    const CERT_INFO_ISSUER_EMAIL_NAME = 3;
-
-    /** @var int  Returns the UPN of the certificate subject. Introduced in CAPICOM 2.0. */
-    const CERT_INFO_SUBJECT_UPN = 4;
-
-    /** @var int  Returns the UPN of the issuer of the certificate. Introduced in CAPICOM 2.0. */
-    const CERT_INFO_ISSUER_UPN = 5;
-
-    /** @var int  Returns the DNS name of the certificate subject. Introduced in CAPICOM 2.0. */
-    const CERT_INFO_SUBJECT_DNS_NAME = 6;
-
-    /** @var int  Returns the DNS name of the issuer of the certificate. Introduced in CAPICOM 2.0. */
-    const CERT_INFO_ISSUER_DNS_NAME = 7;
 
     /**
      * Описывает сертификат открытого ключа.

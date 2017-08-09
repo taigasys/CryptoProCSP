@@ -3,7 +3,8 @@
 namespace CProCSP;
 
 /**
- * Объект CPSigner предоставляет интерфейсы ICPSigner6, ICPSigner5, ICPSigner4, ICPSigner3,
+ * Только описание! Для автокомплитов IDE и справки
+ * CPSigner класс плагина предоставляет интерфейсы ICPSigner6, ICPSigner5, ICPSigner4, ICPSigner3,
  * ICPSigner2, ICPSigner и интерфейс, аналогичный CAPICOM.Signer .
  * @see http://cpdn.cryptopro.ru/default.asp?url=content/cades/class_c_ad_e_s_c_o_m_1_1_c_p_signer.html
  * @package CProCSP
@@ -14,7 +15,7 @@ class CPSigner
      * Возвращает сертификат подписанта
      * The Certificate object that represents the certificate of a signer of the data.
      *
-     * @return CPcertificate
+     * @return \CProCSP\CPcertificate
      */
     public function get_Certificate () {}
 
