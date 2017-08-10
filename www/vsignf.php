@@ -1,5 +1,5 @@
 <?php
-namespace CProCSP;
+//namespace CProCSP;
 
 /**
  * Автозагрузчик классов
@@ -18,7 +18,7 @@ spl_autoload_register(function ($class) {
     }
 });
 
-$jsonReply = new JsonReply();
+$jsonReply = new CProCSP\JsonReply();
 
 if (!isset($_POST['hash'], $_POST['sign'])) {
     $jsonReply->sendError('Не переданы hash и sign');
@@ -28,12 +28,12 @@ $hash = $_POST['hash'];
 $sign = $_POST['sign'];
 
 try {
-    /** @var \CProCSP\CPHashedData $hd */
+    /** @var CProCSP\CPHashedData $hd */
     $hd = new CPHashedData();
     $hd->set_Algorithm(HASH_ALGORITHM_GOSTR_3411);
     $hd->SetHashValue($hash);
 
-    /** @var \CProCSP\CPSignedData $sd */
+    /** @var CProCSP\CPSignedData $sd */
     $sd = new CPSignedData();
 
     //Для получения объекта подписи необходимо задать любой контент. Это баг на форуме есть инфа.
@@ -57,21 +57,24 @@ try {
     $res = [];
     /** @var \CProCSP\CPSigners $signers */
     $signers = $sd->get_Signers();
+    if (null !== $signers) {
+        $signersCount = $signers->get_Count();
 
-    for ($i = 1; $i <= $signers; $i ++) {
-        $signer = $signers->get_Item($i);
-        $res[$i]['signingTime'] = $signer->get_SigningTime();
+        for ($i = 1; $i <= $signersCount; $i++) {
+            $signer = $signers->get_Item($i);
+            $res[$i]['signingTime'] = $signer->get_SigningTime();
 
-        /** @var \CProCSP\CPcertificate $cert */
-        $cert = $signer->get_Certificate();
-        $res[$i]['cert']['validToDate'] = $cert->get_ValidToDate();
-        $res[$i]['cert']['certValidFromDate'] = $cert->get_ValidFromDate();
-        $res[$i]['cert']['subjectName'] = $cert->get_SubjectName();
-        $res[$i]['cert']['issuerName'] = $cert->get_IssuerName();
+            /** @var \CProCSP\CPcertificate $cert */
+            $cert = $signer->get_Certificate();
+            $res[$i]['cert']['validToDate'] = $cert->get_ValidToDate();
+            $res[$i]['cert']['certValidFromDate'] = $cert->get_ValidFromDate();
+            $res[$i]['cert']['subjectName'] = $cert->get_SubjectName();
+            $res[$i]['cert']['issuerName'] = $cert->get_IssuerName();
+        }
+
+        $jsonReply->data->signers = $signersCount;
+        $jsonReply->data->property = $res;
     }
-
-    $jsonReply->data->signers = $signers;
-    $jsonReply->data->property = $res;
 
 } catch (\Exception $e) {
     $jsonReply->data->propertyMess = $e->getMessage();
