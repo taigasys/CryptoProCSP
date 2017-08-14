@@ -7,7 +7,8 @@
 function SetupStore($location, $name, $mode)
 {
     $store = new CPStore();
-    return $store->Open($location, $name, $mode);
+    $store->Open($location, $name, $mode);
+    return $store;
 }
 
 function SetupCertificates($location, $name, $mode)
@@ -17,7 +18,8 @@ function SetupCertificates($location, $name, $mode)
     return $certs;
 }
 
-function SetupCertificate($location, $name, $mode, $find_type, $query, $valid_only, $number) {
+function SetupCertificate($location, $name, $mode, $find_type, $query, $valid_only, $number)
+{
     $certs = SetupCertificates($location, $name, $mode);
     if ($find_type != null) {
         $certs = $certs->Find($find_type, $query, $valid_only);
@@ -33,9 +35,15 @@ function test_CPSignedData_Sign_Verify()
     try {
         $content = "test content";
         $address = "http://testca.cryptopro.ru/tsp/tsp.srf";
-        $cert = SetupCertificate(CURRENT_USER_STORE, "My", STORE_OPEN_READ_ONLY,
-            CERTIFICATE_FIND_SUBJECT_NAME, "test", 0,
-            1);
+        $cert = SetupCertificate(
+            CURRENT_USER_STORE,
+            "My",
+            STORE_OPEN_READ_ONLY,
+            CERTIFICATE_FIND_SUBJECT_NAME,
+            "test", //Идентификатор сертификата в строке CN
+            0,
+            1
+        );
 
         if (!$cert) {
             return "Certificate not found";

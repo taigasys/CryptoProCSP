@@ -18,7 +18,23 @@ spl_autoload_register(function ($class) {
     }
 });
 
-$jsonReply = new CProCSP\JsonReply();
+/**
+ * Разбирает строку параметров в массив
+ * @param string $params Строка параметров "CN=213, O=123213"
+ * @return array
+ */
+function parseParams($params){
+    $res = [];
+    $arr = explode(', ', $params);
+    foreach ($arr as $row){
+        $tmp = explode('=', $params);
+        $res[$tmp[0]] = $tmp[1];
+    }
+
+    return $res;
+}
+
+$jsonReply = new lib\JsonReply();
 
 if (!isset($_POST['hash'], $_POST['sign'])) {
     $jsonReply->sendError('Не переданы hash и sign');
@@ -55,6 +71,7 @@ try {
 //Получение дополнительных данных
 try {
     $res = [];
+    //$sd->get_Certificates();
     /** @var \CProCSP\CPSigners $signers */
     $signers = $sd->get_Signers();
     if (null !== $signers) {
@@ -67,9 +84,9 @@ try {
             /** @var \CProCSP\CPcertificate $cert */
             $cert = $signer->get_Certificate();
             $res[$i]['cert']['validToDate'] = $cert->get_ValidToDate();
-            $res[$i]['cert']['certValidFromDate'] = $cert->get_ValidFromDate();
-            $res[$i]['cert']['subjectName'] = $cert->get_SubjectName();
-            $res[$i]['cert']['issuerName'] = $cert->get_IssuerName();
+            $res[$i]['cert']['validFromDate'] = $cert->get_ValidFromDate();
+            $res[$i]['cert']['subjectName'] = parseParams($cert->get_SubjectName());
+            $res[$i]['cert']['issuerName'] = parseParams($cert->get_IssuerName());
         }
 
         $jsonReply->data->signers = $signersCount;
