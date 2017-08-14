@@ -21,9 +21,9 @@ const CADES_X_LONG_TYPE_1 = 0x5D;
  * @var int ENCODE_BASE64 Data is saved as a base64-encoded string.
  * @var int ENCODE_BINARY Data is saved as a pure binary sequence.
  */
-const ENCODE_ANY = 0xffffffff;
+/*const ENCODE_ANY = 0xffffffff;
 const ENCODE_BASE64 = 0;
-const ENCODE_BINARY = 1;
+const ENCODE_BINARY = 1;*/
 
 /**
  * Глобальные константы тип проверки подписи, например для CPSignedData::Verify
