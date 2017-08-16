@@ -55,6 +55,7 @@ try {
     $sd = new CPSignedData();
 
     //Для получения объекта подписи необходимо задать любой контент. Это баг на форуме есть инфа.
+    //https://www.cryptopro.ru/forum2/default.aspx?g=posts&m=78553#post78553
     $sd->set_Content('123');
 
 } catch (\Exception $e) {

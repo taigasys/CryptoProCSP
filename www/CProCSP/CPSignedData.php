@@ -49,17 +49,17 @@ const VERIFY_SIGNATURE_AND_CERTIFICATE = 1;
  */
 class CPSignedData
 {
-    public function SignCades () {}
+    public function SignCades() {}
 
     /**
      * Добавляет к сообщению усовершенствованную подпись.
      */
-    public function SignHash () {}
+    public function SignHash() {}
 
     /**
      *
      */
-    public function CoSignHash () {}
+    public function CoSignHash() {}
 
     /**
      * Создает подпись
@@ -84,12 +84,12 @@ class CPSignedData
     /**
      *
      */
-    public function CoSignCades () {}
+    public function CoSignCades() {}
 
     /**
      *
      */
-    public function EnhanceCades () {}
+    public function EnhanceCades() {}
 
     /**
      * Determines the validity of a signature or signatures.
@@ -97,12 +97,12 @@ class CPSignedData
      * @param boolean $bDetached If True, the data to be signed is detached
      * @param int $verifyFlag A value of the CAPICOM_SIGNED_DATA_VERIFY_FLAG
      */
-    public function Verify ($signedMessage, $bDetached = false, $verifyFlag) {}
+    public function Verify($signedMessage, $bDetached = false, $verifyFlag) {}
 
     /**
      *
      */
-    public function VerifyCades () {}
+    public function VerifyCades() {}
 
     /**
      * Проверяет усовершенствованную подпись на основе переданного хэш-значения.
@@ -119,12 +119,12 @@ class CPSignedData
      *
      * @throws \Exception Генерирует Ошибки в любом случае кроме успешной проверки
      */
-    public function VerifyHash ($hash, $signedMessage, $cadesType = CADES_DEFAULT) {}
+    public function VerifyHash($hash, $signedMessage, $cadesType = CADES_DEFAULT) {}
 
     /**
      *
      */
-    public function set_ContentEncoding () {}
+    public function set_ContentEncoding() {}
 
     /**
      * Данные которые будем подписывать
@@ -142,11 +142,11 @@ class CPSignedData
      *
      * @return \CProCSP\CPSigners
      */
-    public function get_Signers () {}
+    public function get_Signers() {}
 
     /**
      * Retrieves the Certificates collection of the signed data.
      */
-    public function get_Certificates () {}
+    public function get_Certificates() {}
 
 }
