@@ -21,19 +21,14 @@ PHP расширение для работы с подписями через и
 -------------
     /conf - кнфигурационные файлы 
         Makefile.unix - Файл сборки расширения
-        start.sh - скрипт запуска необходимых сервисов в контенере
+        getRootAndCACert.php - скрипт получения корневых и УЦ сертификатов, необходимы для проверки подписей
+        start.sh - скрипт инициализации и запуска необходимых сервисов в контейнере
+        
     /dist - дистрибутивы программ и файлы необходимые для компиляции и запуска приложений описаны в установке.
         linux-amd64_deb.tgz - дистрибутив CryptoPro CSP 4
         cades_linux_amd64.tar.gz - дистрибутива КриптоПро ЭЦП Browser plug-in
-        
         php-5.6.30.tar.bz2 - исходники необходимой версии PHP
         
-        #Тестовые сертификаты устанавливаются для тестирования
-        certnew.cer - корневой сертификат тестового УЦ КриптоПро 
-        personal.cer - персональный сертификат сгенериный на тестовом УЦ для
-        
-        #Боевые сертификаты необходимы для проверки реальных сертификатов 
-        GUC.crt - корневой сертификат минсвязи
     /www - каталог с PHP API
     /docker-compose-dev.yml - пример конфига для docker-compose 
     /Dockerfile - Файл сборки контенера
@@ -57,17 +52,6 @@ php-5.6.30.tar.bz2
 Исходники необходимой версии PHP нужны для сборки берутся тут http://php.net/releases/  
 Версию можно посмотреть командой php -v  
 
-Тестовые сертификаты генерируются и качаются на тестовом УЦ http://www.cryptopro.ru/certsrv/  
-certnew.cer прямая ссылка http://www.cryptopro.ru/products/cades/plugin/get_2_0  
-personal.cer  
-Персональный сертификат генерируется тут http://www.cryptopro.ru/certsrv/certrqma.asp  
-Для генерации необходимо чтобы на компьютере был установлен криптопровайдер, КриптоПро ЭЦП Browser plug-in и корневой сертификат тестового УЦ  
-Необходим для запуска скриптов для тестирования подписания.  
-Тут http://www.cryptopro.ru/sites/default/files/products/cades/demopage/main.html страница проверки работы плагина.  
-
-Боевые сертификаты необходимы для проверки реальных сертификатов   
-GUC.crt качается тут https://e-trust.gosuslugi.ru/MainCA  
-
 После чего запускаем сборку докера:  
 ```docker build -t cprocsp ./```
   
@@ -78,6 +62,47 @@ GUC.crt качается тут https://e-trust.gosuslugi.ru/MainCA
 
 Если что то пошло не так можно войти в контейнер и попытаться это решить:  
 ```docker exec -it cprocsp bash```
+
+Корневые сертификаты и сертификаты УЦ
+----------------------------------------
+Боевые сертификаты необходимы для проверки реальных сертификатов  
+Качается тут https://e-trust.gosuslugi.ru/MainCA  
+
+Сертификаты УЦ представлены в реестре http://e-trust.gosuslugi.ru/CA.  
+Там же можно загрузить список в xml представлении http://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0
+
+Установка всех сертификатов в папке с раширением .cer  
+```
+find . -name *.cer -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \;
+```
+
+Тестовые сертификаты
+--------------------
+Можно использовать для тестирования подписи.
+Тестовые сертификаты генерируются и качаются на тестовом УЦ http://www.cryptopro.ru/certsrv/  
+Коневой сертификат тестового УЦ прямая ссылка http://www.cryptopro.ru/products/cades/plugin/get_2_0
+Установка тестового корневого сертификата УЦ  
+``` 
+/opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file /root/certnew.cer
+```
+
+Команды генерации хранилища могут вызывать ошибки при установленном пакете lsb-cprocsp-kc2*  
+решается его удалением и установкой после генерации)  
+
+Генерация запроса на сертификат (Должен быть установлен коневой сертификат тестового УЦ)  
+```
+/opt/cprocsp/bin/amd64/cryptcp -creatrqst -dn "E=mail@bk.ru, CN=test" -ku -cont '\\.\HDIMAGE\test' -provtype 75 main.req
+```
+Получившийся файл вставляем в поле "Сохраненный запрос" тут http://www.cryptopro.ru/certsrv/certrqxt.asp и качаем сертификат.  
+Показать содержимое для попирования  
+```
+cat main.req
+```
+
+Установка сгенерированного в УЦ сертификата.
+```
+/opt/cprocsp/bin/amd64/certmgr -inst -file /www/certnew.cer -cont '\\.\HDIMAGE\test'
+```
 
 Описание API
 -----------
@@ -100,3 +125,6 @@ http://pushorigin.ru/cryptopro/test-cert-crypto-pro
 
 Установка плагина в FireFox 53^  
 https://support.cryptopro.ru/index.php?/Knowledgebase/Article/View/223/0/podderzhk-npapi-plginov-v-firefox-versii-53-i-vyshe  
+
+Страница проверки работы плагина  
+http://www.cryptopro.ru/sites/default/files/products/cades/demopage/main.html    

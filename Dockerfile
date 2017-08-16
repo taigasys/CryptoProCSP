@@ -36,6 +36,7 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu trusty main" >> /etc/ap
 	locale-gen en_US en_US.UTF-8 && dpkg-reconfigure locales
 
 ADD dist /root/
+ADD dist/root_certs /root/root_certs
 ADD conf /root/
 
 RUN mkdir /www && \
