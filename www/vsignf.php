@@ -25,12 +25,14 @@ spl_autoload_register(function ($class) {
  */
 function parseParams($params){
     $res = [];
-    $arr = explode(', ', $params);
-    foreach ($arr as $row){
-        $tmp = explode('=', $params);
-        $res[$tmp[0]] = $tmp[1];
-    }
+    preg_match_all("/([a-zA-Z]+)=(\".*?\"|.*?)\,/", $params . ',', $output_array);
 
+    if (isset($output_array[1], $output_array[2])) {
+        foreach ($output_array[1] as $i => $row) {
+
+            $res[$output_array[1][$i]] = $output_array[2][$i];
+        }
+    }
     return $res;
 }
 
@@ -79,18 +81,17 @@ try {
 
         for ($i = 1; $i <= $signersCount; $i++) {
             $signer = $signers->get_Item($i);
-            $res[$i]['signingTime'] = $signer->get_SigningTime();
+            $res[$i-1]['signingTime'] = $signer->get_SigningTime();
 
             /** @var \CProCSP\CPcertificate $cert */
             $cert = $signer->get_Certificate();
-            $res[$i]['cert']['validToDate'] = $cert->get_ValidToDate();
-            $res[$i]['cert']['validFromDate'] = $cert->get_ValidFromDate();
-            $res[$i]['cert']['subjectName'] = parseParams($cert->get_SubjectName());
-            $res[$i]['cert']['issuerName'] = parseParams($cert->get_IssuerName());
+            $res[$i-1]['cert']['validToDate'] = $cert->get_ValidToDate();
+            $res[$i-1]['cert']['validFromDate'] = $cert->get_ValidFromDate();
+            $res[$i-1]['cert']['subjectName'] = parseParams($cert->get_SubjectName());
+            $res[$i-1]['cert']['issuerName'] = parseParams($cert->get_IssuerName());
         }
 
-        $jsonReply->data->signers = $signersCount;
-        $jsonReply->data->property = $res;
+        $jsonReply->data->signers = $res;
     }
 
 } catch (\Exception $e) {
