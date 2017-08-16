@@ -28,9 +28,9 @@ alien -kci cprocsp-pki-2.0.0-amd64-cades.rpm && \
 # Скачивание корневых и УЦ сертификатов
 php5.6 getRootAndCACerts.php && \
 # Установка коневых сертификатов
-find ./root_certs/ -name *.cer -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; && \
+find ./root_certs/ -name "*.cer" -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; && \
 # Установка УЦ сертификатов
-find ./ca_certs/ -name *.cer -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; && \
+find ./ca_certs/ -name "*.cer" -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; && \
 # Запуск web сервера для ответов по API
 php -S 0.0.0.0:80 -t /www
 

@@ -31,12 +31,11 @@ RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu trusty main" >> /etc/ap
         # Пакеты для отладки
 		# wget strace nano \
         # PHP необходимой версии 5.6
-		php5.6 php5.6-cli php5.6-dev php5.6-json php5.6-mcrypt php5.6-curl && \
+		php5.6 php5.6-cli php5.6-dev php5.6-json php5.6-mcrypt php5.6-curl php5.6-SimpleXML && \
     # Обновление локали
 	locale-gen en_US en_US.UTF-8 && dpkg-reconfigure locales
 
 ADD dist /root/
-ADD dist/root_certs /root/root_certs
 ADD conf /root/
 
 RUN mkdir /www && \

@@ -2,7 +2,6 @@
 DIR=$(pwd)
 
 docker run \
-  -d \
   --rm \
   --name cprocsp \
   --privileged \
