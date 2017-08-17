@@ -27,7 +27,7 @@ spl_autoload_register(function ($class) {
 function parseParams($params)
 {
     $res = [];
-    preg_match_all("/([a-zA-Z]+)=(\".*?\"|.*?)\,/", $params . ',', $output_array);
+    preg_match_all('/([a-zA-Z]+)=(\".*?\"|.*?),/', $params . ',', $output_array);
 
     if (isset($output_array[1], $output_array[2])) {
         foreach ($output_array[1] as $i => $row) {
