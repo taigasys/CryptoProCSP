@@ -1,5 +1,6 @@
 <?php
 //namespace CProCSP;
+use lib\ErrorCodes;
 
 /**
  * Автозагрузчик классов
@@ -23,7 +24,8 @@ spl_autoload_register(function ($class) {
  * @param string $params Строка параметров "CN=213, O=123213"
  * @return array
  */
-function parseParams($params){
+function parseParams($params)
+{
     $res = [];
     preg_match_all("/([a-zA-Z]+)=(\".*?\"|.*?)\,/", $params . ',', $output_array);
 
@@ -44,6 +46,9 @@ if (!isset($_POST['hash'], $_POST['sign'])) {
 
 $hash = $_POST['hash'];
 $sign = $_POST['sign'];
+
+//$hash = hash('gost-crypto', file_get_contents(__DIR__ . '/test_certs/732.pdf.sgn'));
+//$sign = file_get_contents(__DIR__ . '/test_certs/732.pdf.sgn');
 
 try {
     /** @var CProCSP\CPHashedData $hd */
@@ -68,35 +73,71 @@ try {
     $jsonReply->data->verify = 1;
 } catch (\Exception $e) {
     $jsonReply->data->verify = 0;
-    $jsonReply->data->verifyMess = $e->getMessage();
+    $jsonReply->data->verifyMessage = ErrorCodes::getMessage($e->getCode(), $e->getMessage());
 }
 
 //Получение дополнительных данных
 try {
-    $res = [];
-    //$sd->get_Certificates();
     /** @var \CProCSP\CPSigners $signers */
     $signers = $sd->get_Signers();
-    if (null !== $signers) {
-        $signersCount = $signers->get_Count();
+} catch (\Exception $e) {
+    $signers = null;
+    $jsonReply->data->signersMessage = 'Подписанты не найдены';
+}
 
-        for ($i = 1; $i <= $signersCount; $i++) {
-            $signer = $signers->get_Item($i);
-            $res[$i-1]['signingTime'] = $signer->get_SigningTime();
+try {
+    $signersCount = $signers->get_Count();
+} catch (\Exception $e) {
+    $signersCount = 0;
+}
 
-            /** @var \CProCSP\CPcertificate $cert */
-            $cert = $signer->get_Certificate();
-            $res[$i-1]['cert']['validToDate'] = $cert->get_ValidToDate();
-            $res[$i-1]['cert']['validFromDate'] = $cert->get_ValidFromDate();
-            $res[$i-1]['cert']['subjectName'] = parseParams($cert->get_SubjectName());
-            $res[$i-1]['cert']['issuerName'] = parseParams($cert->get_IssuerName());
+if (null !== $signers && $signersCount > 0) {
+    $res = [];
+
+    for ($i = 1; $i <= $signersCount; $i++) {
+
+        $signer = $signers->get_Item($i);
+        //TODO try HELL!
+        try {
+            $res[$i - 1]['signingTime'] = $signer->get_SigningTime();
+        } catch (\Exception $e) {
+            $res[$i - 1]['signingTime'] = '';
         }
 
-        $jsonReply->data->signers = $res;
+        try {
+            /** @var \CProCSP\CPcertificate $cert */
+            $cert = $signer->get_Certificate();
+        } catch (\Exception $e) {
+            $cert = null;
+        }
+        if (null !== $cert) {
+            try {
+                $res[$i - 1]['cert']['validToDate'] = $cert->get_ValidToDate();
+            } catch (\Exception $e) {
+                $res[$i - 1]['cert']['validToDate'] = '';
+            }
+
+            try {
+                $res[$i - 1]['cert']['validFromDate'] = $cert->get_ValidFromDate();
+            } catch (\Exception $e) {
+                $res[$i - 1]['cert']['validFromDate'] = '';
+            }
+
+            try {
+                $res[$i - 1]['cert']['subjectName'] = parseParams($cert->get_SubjectName());
+            } catch (\Exception $e) {
+                $res[$i - 1]['cert']['subjectName'] = '';
+            }
+
+            try {
+                $res[$i - 1]['cert']['issuerName'] = parseParams($cert->get_IssuerName());
+            } catch (\Exception $e) {
+                $res[$i - 1]['cert']['issuerName'] = '';
+            }
+        }
     }
 
-} catch (\Exception $e) {
-    $jsonReply->data->propertyMess = $e->getMessage();
+    $jsonReply->data->signers = $res;
 }
 
 $jsonReply->sendData();

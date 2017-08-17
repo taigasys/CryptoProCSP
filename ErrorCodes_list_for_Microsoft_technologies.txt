@@ -1,0 +1,3819 @@
+Problem
+
+What is the meaning of Microsoft error codes? 
+
+Solution
+
+In the error hex codes; there is a first part called the HRESULT values (0x0000XXX) that shows the type of error.
+
+System error codes
+0, 0x00000000, The operation completed successfully.
+
+1, 0x00000001, Incorrect function.
+
+2, 0x00000002, The system cannot find the file specified.
+
+3, 0x00000003, The system cannot find the path specified.
+
+4, 0x00000004, The system cannot open the file.
+
+5, 0x00000005, Access is denied.
+
+6, 0x00000006, The handle is invalid.
+
+7, 0x00000007, The storage control blocks were destroyed.
+
+8, 0x00000008, Not enough storage is available to process this command.
+
+9, 0x00000009, The storage control block address is invalid.
+
+10, 0x0000000A, The environment is incorrect.
+
+11, 0x0000000B, An attempt was made to load a program with an incorrect format.
+
+12, 0x0000000C, The access code is invalid.
+
+13, 0x0000000D, The data is invalid.
+
+14, 0x0000000E, Not enough storage is available to complete this operation.
+
+15, 0x0000000F, The system cannot find the drive specified.
+
+16, 0x00000010, The directory cannot be removed.
+
+17, 0x00000011, The system cannot move the file to a different disk drive.
+
+18, 0x00000012, There are no more files.
+
+19, 0x00000013, The media is write protected.
+
+20, 0x00000014, The system cannot find the device specified.
+
+21, 0x00000015, The device is not ready.
+
+22, 0x00000016, The device does not recognize the command.
+
+23, 0x00000017, Data error (cyclic redundancy check)
+
+24, 0x00000018, The program issued a command but the command length is incorrect.
+
+25, 0x00000019, The drive cannot locate a specific area or track on the disk.
+
+26, 0x0000001A, The specified disk or diskette cannot be accessed.
+
+27, 0x0000001B, The drive cannot find the sector requested.
+
+28, 0x0000001C, The printer is out of paper.
+
+29, 0x0000001D, The system cannot write to the specified device.
+
+30, 0x0000001E, The system cannot read from the specified device.
+
+31, 0x0000001F, A device attached to the system is not functioning.
+
+32, 0x00000020, The process cannot access the file because it is being used by another process.
+
+33, 0x00000021, The process cannot access the file because another process has locked a portion of the file.
+
+34, 0x00000022, The wrong diskette is in the drive. Insert %2 (Volume Serial Number: %3) into drive %1.
+
+36, 0x00000024, Too many files opened for sharing.
+
+38, 0x00000026, Reached end of file.
+
+39, 0x00000027, The disk is full.
+
+50, 0x00000032, The network request is not supported.
+
+51, 0x00000033, The remote computer is not available.
+
+52, 0x00000034, A duplicate name exists on the network.
+
+53, 0x00000035, The network path was not found.
+
+54, 0x00000036, The network is busy.
+
+55, 0x00000037, The specified network resource or device is no longer available.
+
+56, 0x00000038, The network BIOS command limit has been reached.
+
+57, 0x00000039, A network adapter hardware error occurred.
+
+58, 0x0000003A, The specified server cannot perform the requested operation.
+
+59, 0x0000003B, An unexpected network error occurred.
+
+60, 0x0000003C, The remote adapter is not compatible.
+
+61, 0x0000003D, The printer queue is full.
+
+62, 0x0000003E, Space to store the file waiting to be printed is not available on the server.
+
+63, 0x0000003F, Your file waiting to be printed was deleted.
+
+64, 0x00000040, The specified network name is no longer available.
+
+65, 0x00000041, Network access is denied.
+
+66, 0x00000042, The network resource type is not correct.
+
+67, 0x00000043, The network name cannot be found.
+
+68, 0x00000044, The name limit for the local computer network adapter card was exceeded.
+
+69, 0x00000045, The network BIOS session limit was exceeded.
+
+70, 0x00000046, The remote server has been paused or is in the process of being started.
+
+71, 0x00000047, No more connections can be made to this remote computer at this time because there are already as many connections as the computer can accept.
+
+72, 0x00000048, The specified printer or disk device has been paused.
+
+80, 0x00000050, The file exists.
+
+82, 0x00000052, The directory or file cannot be created.
+
+83, 0x00000053, Fail on INT 24
+
+84, 0x00000054, Storage to process this request is not available.
+
+85, 0x00000055, The local device name is already in use.
+
+86, 0x00000056, The specified network password is not correct.
+
+87, 0x00000057, The parameter is incorrect.
+
+88, 0x00000058, A write fault occurred on the network.
+
+89, 0x00000059, The system cannot start another process at this time.
+
+100, 0x00000064, Cannot create another system semaphore.
+
+101, 0x00000065, The exclusive semaphore is owned by another process.
+
+102, 0x00000066, The semaphore is set and cannot be closed.
+
+103, 0x00000067, The semaphore cannot be set again.
+
+104, 0x00000068, Cannot request exclusive semaphores at interrupt time.
+
+105, 0x00000069, The previous ownership of this semaphore has ended.
+
+106, 0x0000006A, Insert the diskette for drive %1.
+
+107, 0x0000006B, Program stopped because alternate diskette was not inserted.
+
+108, 0x0000006C, The disk is in use or locked by another process.
+
+109, 0x0000006D, The pipe has been ended.
+
+110, 0x0000006E, The system cannot open the device or file specified.
+
+111, 0x0000006F, The file name is too long.
+
+112, 0x00000070, There is not enough space on the disk.
+
+113, 0x00000071, No more internal file identifiers available.
+
+114, 0x00000072, The target internal file identifier is incorrect.
+
+117, 0x00000075, The IOCTL call made by the application program is not correct.
+
+118, 0x00000076, The verify-on-write switch parameter value is not correct.
+
+119, 0x00000077, The system does not support the command requested.
+
+120, 0x00000078, This function is only valid in Windows NT mode.
+
+121, 0x00000079, The semaphore timeout period has expired.
+
+122, 0x0000007A, The data area passed to a system call is too small.
+
+123, 0x0000007B, The filename, directory name, or volume label syntax is incorrect.
+
+124, 0x0000007C, The system call level is not correct.
+
+125, 0x0000007D, The disk has no volume label.
+
+126, 0x0000007E, The specified module could not be found.
+
+127, 0x0000007F, The specified procedure could not be found.
+
+128, 0x00000080, There are no child processes to wait for.
+
+129, 0x00000081, The %1 application cannot be run in Windows NT mode.
+
+130, 0x00000082, Attempt to use a file handle to an open disk partition for an operation other than raw disk I/O.
+
+131, 0x00000083, An attempt was made to move the file pointer before the beginning of the file.
+
+132, 0x00000084, The file pointer cannot be set on the specified device or file.
+
+133, 0x00000085, A JOIN or SUBST command cannot be used for a drive that contains previously joined drives.
+
+134, 0x00000086, An attempt was made to use a JOIN or SUBST command on a drive that has already been joined.
+
+135, 0x00000087, An attempt was made to use a JOIN or SUBST command on a drive that has already been substituted.
+
+136, 0x00000088, The system tried to delete the JOIN of a drive that is not joined.
+
+137, 0x00000089, The system tried to delete the substitution of a drive that is not substituted.
+
+138, 0x0000008A, The system tried to join a drive to a directory on a joined drive.
+
+139, 0x0000008B, The system tried to substitute a drive to a directory on a substituted drive.
+
+140, 0x0000008C, The system tried to join a drive to a directory on a substituted drive.
+
+141, 0x0000008D, The system tried to SUBST a drive to a directory on a joined drive.
+
+142, 0x0000008E, The system cannot perform a JOIN or SUBST at this time.
+
+143, 0x0000008F, The system cannot join or substitute a drive to or for a directory on the same drive.
+
+144, 0x00000090, The directory is not a subdirectory of the root directory.
+
+145, 0x00000091, The directory is not empty.
+
+146, 0x00000092, The path specified is being used in a substitute.
+
+147, 0x00000093, Not enough resources are available to process this command.
+
+148, 0x00000094, The path specified cannot be used at this time.
+
+149, 0x00000095, An attempt was made to join or substitute a drive for which a directory on the drive is the target of a previous substitute.
+
+150, 0x00000096, System trace information was not specified in your CONFIG.SYS file, or tracing is disallowed.
+
+151, 0x00000097, The number of specified semaphore events for DosMuxSemWait is not correct.
+
+152, 0x00000098, DosMuxSemWait did not execute; too many semaphores are already set.
+
+153, 0x00000099, The DosMuxSemWait list is not correct.
+
+154, 0x0000009A, The volume label you entered exceeds the label character limit of the target file system.
+
+155, 0x0000009B, Cannot create another thread.
+
+156, 0x0000009C, The recipient process has refused the signal.
+
+157, 0x0000009D, The segment is already discarded and cannot be locked.
+
+158, 0x0000009E, The segment is already unlocked.
+
+159, 0x0000009F, The address for the thread ID is not correct.
+
+160, 0x000000A0, The argument string passed to DosExecPgm is not correct.
+
+161, 0x000000A1, The specified path is invalid.
+
+162, 0x000000A2, A signal is already pending.
+
+164, 0x000000A4, No more threads can be created in the system.
+
+167, 0x000000A7, Unable to lock a region of a file.
+
+170, 0x000000AA, The requested resource is in use.
+
+173, 0x000000AD, A lock request was not outstanding for the supplied cancel region.
+
+174, 0x000000AE, The file system does not support atomic changes to the lock type.
+
+180, 0x000000B4, The system detected a segment number that was not correct.
+
+182, 0x000000B6, The operating system cannot run %1.
+
+183, 0x000000B7, Cannot create a file when that file already exists.
+
+186, 0x000000BA, The flag passed is not correct.
+
+187, 0x000000BB, The specified system semaphore name was not found.
+
+188, 0x000000BC, The operating system cannot run %1.
+
+189, 0x000000BD, The operating system cannot run %1.
+
+190, 0x000000BE, The operating system cannot run %1.
+
+191, 0x000000BF, Cannot run %1 in Windows NT mode.
+
+192, 0x000000C0, The operating system cannot run %1.
+
+193, 0x000000C1, %1 is not a valid Windows NT application.
+
+194, 0x000000C2, The operating system cannot run %1.
+
+195, 0x000000C3, The operating system cannot run %1.
+
+196, 0x000000C4, The operating system cannot run this application program.
+
+197, 0x000000C5, The operating system is not presently configured to run this application.
+
+198, 0x000000C6, The operating system cannot run %1.
+
+199, 0x000000C7, The operating system cannot run this application program.
+
+200, 0x000000C8, The code segment cannot be greater than or equal to 64KB.
+
+201, 0x000000C9, The operating system cannot run %1.
+
+202, 0x000000CA, The operating system cannot run %1.
+
+203, 0x000000CB, The system could not find the environment option that was entered.
+
+205, 0x000000CD, No process in the command subtree has a signal handler.
+
+206, 0x000000CE, The filename or extension is too long.
+
+207, 0x000000CF, The ring 2 stack is in use.
+
+208, 0x000000D0, The global filename characters, * or ?, are entered incorrectly or too many global filename characters are specified.
+
+209, 0x000000D1, The signal being posted is not correct.
+
+210, 0x000000D2, The signal handler cannot be set.
+
+212, 0x000000D4, The segment is locked and cannot be reallocated.
+
+214, 0x000000D6, Too many dynamic link modules are attached to this program or dynamic link module.
+
+215, 0x000000D7, Can't nest calls to LoadModule.
+
+216, 0x000000D8, The image file %1 is valid, but is for a machine type other than the current machine.
+
+230, 0x000000E6, The pipe state is invalid.
+
+231, 0x000000E7, All pipe instances are busy.
+
+232, 0x000000E8, The pipe is being closed.
+
+233, 0x000000E9, No process is on the other end of the pipe.
+
+234, 0x000000EA, More data is available.
+
+240, 0x000000F0, The session was cancelled.
+
+254, 0x000000FE, The specified extended attribute name was invalid.
+
+255, 0x000000FF, The extended attributes are inconsistent.
+
+259, 0x00000103, No more data is available.
+
+266, 0x0000010A, The Copy API cannot be used.
+
+267, 0x0000010B, The directory name is invalid.
+
+275, 0x00000113, The extended attributes did not fit in the buffer.
+
+276, 0x00000114, The extended attribute file on the mounted file system is corrupt.
+
+277, 0x00000115, The extended attribute table file is full.
+
+278, 0x00000116, The specified extended attribute handle is invalid.
+
+282, 0x0000011A, The mounted file system does not support extended attributes.
+
+288, 0x00000120, Attempt to release mutex not owned by caller.
+
+298, 0x0000012A, Too many posts were made to a semaphore.
+
+299, 0x0000012B, Only part of a Read/WriteProcessMemory request was completed.
+
+317, 0x0000013D, The system cannot find message for message number 0x%1 in message file for %2.
+
+487, 0x000001E7, Attempt to access invalid address.
+
+534, 0x00000216, Arithmetic result exceeded 32 bits.
+
+535, 0x00000217, There is a process on other end of the pipe.
+
+536, 0x00000218, Waiting for a process to open the other end of the pipe.
+
+994, 0x000003E2, Access to the extended attribute was denied.
+
+995, 0x000003E3, The I/O operation has been aborted because of either a thread exit or an application request.
+
+996, 0x000003E4, Overlapped I/O event is not in a signaled state.
+
+997, 0x000003E5, Overlapped I/O operation is in progress.
+
+998, 0x000003E6, Invalid access to memory location.
+
+999, 0x000003E7, Error performing in-page operation.
+
+1001, 0x000003E9, Recursion too deep, stack overflowed.
+
+1002, 0x000003EA, The window cannot act on the sent message.
+
+1003, 0x000003EB, Cannot complete this function.
+
+1004, 0x000003EC, Invalid flags.
+
+1005, 0x000003ED, The volume does not contain a recognized file system. Please make sure that all required file system drivers are loaded and that the volume is not corrupt.
+
+1006, 0x000003EE, The volume for a file has been externally altered such that the opened file is no longer valid.
+
+1007, 0x000003EF, The requested operation cannot be performed in full-screen mode.
+
+1008, 0x000003F0, An attempt was made to reference a token that does not exist.
+
+1009, 0x000003F1, The configuration registry database is corrupt.
+
+1010, 0x000003F2, The configuration registry key is invalid.
+
+1011, 0x000003F3, The configuration registry key could not be opened.
+
+1012, 0x000003F4, The configuration registry key could not be read.
+
+1013, 0x000003F5, The configuration registry key could not be written.
+
+1014, 0x000003F6, One of the files in the Registry database had to be recovered by use of a log or alternate copy., The recovery was successful.
+
+1015, 0x000003F7, The Registry is corrupt. The structure of one of the files that contains Registry data is corrupt, or the system's image of the file in memory is corrupt, or the file could not be recovered because the alternate copy or log was absent or corrupt.
+
+1016, 0x000003F8, An I/O operation initiated by the Registry failed unrecoverably. The Registry could not read in, or write out, or flush, one of the files that contain the system's image of the Registry.
+
+1017, 0x000003F9, The system has attempted to load or restore a file into the Registry, but the specified file is not in a Registry file format.
+
+1018, 0x000003FA, Illegal operation attempted on a Registry key which has been marked for deletion.
+
+1019, 0x000003FB, System could not allocate the required space in a Registry log.
+
+1020, 0x000003FC, Cannot create a symbolic link in a Registry key that already has subkeys or values.
+
+1021, 0x000003FD, Cannot create a stable subkey under a volatile parent key.
+
+1022, 0x000003FE, A notify change request is being completed and the information is not being returned in the caller's buffer. The caller now needs to enumerate the files to find the changes.
+
+1051, 0x0000041B, A stop control has been sent to a service which other running services are dependent on.
+
+1052, 0x0000041C, The requested control is not valid for this service
+
+1053, 0x0000041D, The service did not respond to the start or control request in a timely fashion.
+
+1054, 0x0000041E, A thread could not be created for the service.
+
+1055, 0x0000041F, The service database is locked.
+
+1056, 0x00000420, An instance of the service is already running.
+
+1057, 0x00000421, The account name is invalid or does not exist.
+
+1058, 0x00000422, The specified service is disabled and cannot be started.
+
+1059, 0x00000423, Circular service dependency was specified.
+
+1060, 0x00000424, The specified service does not exist as an installed service.
+
+1061, 0x00000425, The service cannot accept control messages at this time.
+
+1062, 0x00000426, The service has not been started.
+
+1063, 0x00000427, The service process could not connect to the service controller.
+
+1064, 0x00000428, An exception occurred in the service when handling the control request.
+
+1065, 0x00000429, The database specified does not exist.
+
+1066, 0x0000042A, The service has returned a service-specific error code.
+
+1067, 0x0000042B, The process terminated unexpectedly.
+
+1068, 0x0000042C, The dependency service or group failed to start.
+
+1069, 0x0000042D, The service did not start due to a logon failure.
+
+1070, 0x0000042E, After starting, the service hung in a start-pending state.
+
+1071, 0x0000042F, The specified service database lock is invalid.
+
+1072, 0x00000430, The specified service has been marked for deletion.
+
+1073, 0x00000431, The specified service already exists.
+
+1074, 0x00000432, The system is currently running with the last-known-good configuration.
+
+1075, 0x00000433, The dependency service does not exist or has been marked for deletion.
+
+1076, 0x00000434, The current boot has already been accepted for use as the last-known-good control set.
+
+1077, 0x00000435, No attempts to start the service have been made since the last boot.
+
+1078, 0x00000436, The name is already in use as either a service name or a service display name.
+
+1079, 0x00000437, The account specified for this service is different from the account specified for other services running in the same process.
+
+1100, 0x0000044C, The physical end of the tape has been reached.
+
+1101, 0x0000044D, A tape access reached a filemark.
+
+1102, 0x0000044E, Beginning of tape or partition was encountered.
+
+1103, 0x0000044F, A tape access reached the end of a set of files.
+
+1104, 0x00000450, No more data is on the tape.
+
+1105, 0x00000451, Tape could not be partitioned.
+
+1106, 0x00000452, When accessing a new tape of a multivolume partition, the current blocksize is incorrect.
+
+1107, 0x00000453, Tape partition information could not be found when loading a tape.
+
+1108, 0x00000454, Unable to lock the media eject mechanism.
+
+1109, 0x00000455, Unable to unload the media.
+
+1110, 0x00000456, Media in drive may have changed.
+
+1111, 0x00000457, The I/O bus was reset.
+
+1112, 0x00000458, No media in drive.
+
+1113, 0x00000459, No mapping for the Unicode character exists in the target multi-byte code page.
+
+1114, 0x0000045A, A dynamic link library (DLL) initialization routine failed.
+
+1115, 0x0000045B, A system shutdown is in progress.
+
+1116, 0x0000045C, Unable to abort the system shutdown because no shutdown was in progress.
+
+1117, 0x0000045D, The request could not be performed because of an I/O device error.
+
+1118, 0x0000045E, No serial device was successfully initialized., The serial driver will unload.
+
+1119, 0x0000045F, Unable to open a device that was sharing an interrupt request (IRQ) with other devices. At least one other device that uses that IRQ was already opened.
+
+1120, 0x00000460, A serial I/O operation was completed by another write to the serial port. (The IOCTL_SERIAL_XOFF_COUNTER reached zero.)
+
+1121, 0x00000461, A serial I/O operation completed because the time-out period expired. (The IOCTL_SERIAL_XOFF_COUNTER did not reach zero.)
+
+1122, 0x00000462, No ID address mark was found on the floppy disk.
+
+1123, 0x00000463, Mismatch between the floppy disk sector ID field and the floppy disk controller track address.
+
+1124, 0x00000464, The floppy disk controller reported an error that is not recognized by the floppy disk driver.
+
+1125, 0x00000465, The floppy disk controller returned inconsistent results in its registers.
+
+1126, 0x00000466, While accessing the hard disk, a recalibrate operation failed, even after retries.
+
+1127, 0x00000467, While accessing the hard disk, a disk operation failed even after retries.
+
+1128, 0x00000468, While accessing the hard disk, a disk controller reset was needed, but even that failed.
+
+1129, 0x00000469, Physical end of tape encountered.
+
+1130, 0x0000046A, Not enough server storage is available to process this command.
+
+1131, 0x0000046B, A potential deadlock condition has been detected.
+
+1132, 0x0000046C, The base address or the file offset specified does not have the proper alignment.
+
+1140, 0x00000474, An attempt to change the system power state was vetoed by another application or driver.
+
+1141, 0x00000475, The system BIOS failed an attempt to change the system power state.
+
+1142, 0x00000476, An attempt was made to create more links on a file than the file system supports.
+
+1150, 0x0000047E, The specified program requires a newer version of Windows.
+
+1151, 0x0000047F, The specified program is not a Windows or MS-DOS program.
+
+1152, 0x00000480, Cannot start more than one instance of the specified program.
+
+1153, 0x00000481, The specified program was written for an older version of Windows.
+
+1154, 0x00000482, One of the library files needed to run this application is damaged.
+
+1155, 0x00000483, No application is associated with the specified file for this operation.
+
+1156, 0x00000484, An error occurred in sending the command to the application.
+
+1157, 0x00000485, One of the library files needed to run this application cannot be found.
+
+1200, 0x000004B0, The specified device name is invalid.
+
+1201, 0x000004B1, The device is not currently connected but it is a remembered connection.
+
+1202, 0x000004B2, An attempt was made to remember a device that had previously been remembered.
+
+1203, 0x000004B3, No network provider accepted the given network path.
+
+1204, 0x000004B4, The specified network provider name is invalid.
+
+1205, 0x000004B5, Unable to open the network connection profile.
+
+1206, 0x000004B6, The network connection profile is corrupt.
+
+1207, 0x000004B7, Cannot enumerate a non-container.
+
+1208, 0x000004B8, An extended error has occurred.
+
+1209, 0x000004B9, The format of the specified group name is invalid.
+
+1210, 0x000004BA, The format of the specified computer name is invalid.
+
+1211, 0x000004BB, The format of the specified event name is invalid.
+
+1212, 0x000004BC, The format of the specified domain name is invalid.
+
+1213, 0x000004BD, The format of the specified service name is invalid.
+
+1214, 0x000004BE, The format of the specified network name is invalid.
+
+1215, 0x000004BF, The format of the specified share name is invalid.
+
+1216, 0x000004C0, The format of the specified password is invalid.
+
+1217, 0x000004C1, The format of the specified message name is invalid.
+
+1218, 0x000004C2, The format of the specified message destination is invalid.
+
+1219, 0x000004C3, The credentials supplied conflict with an existing set of credentials.
+
+1220, 0x000004C4, An attempt was made to establish a session to a network server, but there are already too many sessions established to that server.
+
+1221, 0x000004C5, The workgroup or domain name is already in use by another computer on the network.
+
+1222, 0x000004C6, The network is not present or not started.
+
+1223, 0x000004C7, The operation was cancelled by the user.
+
+1224, 0x000004C8, The requested operation cannot be performed on a file with a user mapped section open.
+
+1225, 0x000004C9, The remote system refused the network connection.
+
+1226, 0x000004CA, The network connection was gracefully closed.
+
+1227, 0x000004CB, The network transport endpoint already has an address associated with it.
+
+1228, 0x000004CC, An address has not yet been associated with the network endpoint.
+
+1229, 0x000004CD, An operation was attempted on a non-existent network connection.
+
+1230, 0x000004CE, An invalid operation was attempted on an active network connection.
+
+1231, 0x000004CF, The remote network is not reachable by the transport.
+
+1232, 0x000004D0, The remote system is not reachable by the transport.
+
+1233, 0x000004D1, The remote system does not support the transport protocol.
+
+1234, 0x000004D2, No service is operating at the destination network endpoint on the remote system.
+
+1235, 0x000004D3, The request was aborted.
+
+1236, 0x000004D4, The network connection was aborted by the local system.
+
+1237, 0x000004D5, The operation could not be completed., A retry should be performed.
+
+1238, 0x000004D6, A connection to the server could not be made because the limit on the number of concurrent connections for this account has been reached.
+
+1239, 0x000004D7, Attempting to login during an unauthorized time of day for this account.
+
+1240, 0x000004D8, The account is not authorized to login from this station.
+
+1241, 0x000004D9, The network address could not be used for the operation requested.
+
+1242, 0x000004DA, The service is already registered.
+
+1243, 0x000004DB, The specified service does not exist.
+
+1244, 0x000004DC, The operation being requested was not performed because the user has not been authenticated.
+
+1245, 0x000004DD, The operation being requested was not performed because the user has not logged on to the network. The specified service does not exist.
+
+1246, 0x000004DE, Return that wants caller to continue with work in progress.
+
+1247, 0x000004DF, An attempt was made to perform an initialization operation when initialization has already been completed.
+
+1248, 0x000004E0, No more local devices.
+
+1300, 0x00000514, Not all privileges referenced are assigned to the caller.
+
+1301, 0x00000515, Some mapping between account names and security IDs was not done.
+
+1302, 0x00000516, No system quota limits are specifically set for this account.
+
+1303, 0x00000517, No encryption key is available., A well-known encryption key was returned.
+
+1304, 0x00000518, The NT password is too complex to be converted to a LAN Manager password., The LAN Manager password returned is a NULL string.
+
+1305, 0x00000519, The revision level is unknown.
+
+1306, 0x0000051A, Indicates two revision levels are incompatible.
+
+1307, 0x0000051B, This security ID may not be assigned as the owner of this object.
+
+1308, 0x0000051C, This security ID may not be assigned as the primary group of an object.
+
+1309, 0x0000051D, An attempt has been made to operate on an impersonation token by a thread that is not currently impersonating a client.
+
+1310, 0x0000051E, The group may not be disabled.
+
+1311, 0x0000051F, There are currently no logon servers available to service the logon request.
+
+1312, 0x00000520, A specified logon session does not exist., It may already have, been terminated.
+
+1313, 0x00000521, A specified privilege does not exist.
+
+1314, 0x00000522, A required privilege is not held by the client.
+
+1315, 0x00000523, The name provided is not a properly formed account name.
+
+1316, 0x00000524, The specified user already exists.
+
+1317, 0x00000525, The specified user does not exist.
+
+1318, 0x00000526, The specified group already exists.
+
+1319, 0x00000527, The specified group does not exist.
+
+1320, 0x00000528, Either the specified user account is already a member of the specified group, or the specified group cannot be deleted because it contains a member.
+
+1321, 0x00000529, The specified user account is not a member of the specified group account.
+
+1322, 0x0000052A, The last remaining administration account cannot be disabled or deleted.
+
+1323, 0x0000052B, Unable to update the password., The value provided as the current password is incorrect.
+
+1324, 0x0000052C, Unable to update the password., The value provided for the new password contains values that are not allowed in passwords.
+
+1325, 0x0000052D, Unable to update the password because a password update rule has been violated.
+
+1326, 0x0000052E, Logon failure: unknown user name or bad password.
+
+1327, 0x0000052F, Logon failure: user account restriction.
+
+1328, 0x00000530, Logon failure: account logon time restriction violation.
+
+1329, 0x00000531, Logon failure: user not allowed to log on to this computer.
+
+1330, 0x00000532, Logon failure: the specified account password has expired.
+
+1331, 0x00000533, Logon failure: account currently disabled.
+
+1332, 0x00000534, No mapping between account names and security IDs was done.
+
+1333, 0x00000535, Too many local user identifiers (LUIDs) were requested at one time.
+
+1334, 0x00000536, No more local user identifiers (LUIDs) are available.
+
+1335, 0x00000537, The sub-authority part of a security ID is invalid for this particular use.
+
+1336, 0x00000538, The access control list (ACL) structure is invalid.
+
+1337, 0x00000539, The security ID structure is invalid.
+
+1338, 0x0000053A, The security descriptor structure is invalid.
+
+1340, 0x0000053C, The inherited access control list (ACL) or access control entry (ACE) could not be built.
+
+1341, 0x0000053D, The server is currently disabled.
+
+1342, 0x0000053E, The server is currently enabled.
+
+1343, 0x0000053F, The value provided was an invalid value for an identifier authority.
+
+1344, 0x00000540, No more memory is available for security information updates.
+
+1345, 0x00000541, The specified attributes are invalid, or incompatible with the attributes for the group as a whole.
+
+1346, 0x00000542, Either a required impersonation level was not provided, or the provided impersonation level is invalid.
+
+1347, 0x00000543, Cannot open an anonymous level security token.
+
+1348, 0x00000544, The validation information class requested was invalid.
+
+1349, 0x00000545, The type of the token is inappropriate for its attempted use.
+
+1350, 0x00000546, Unable to perform a security operation on an object which has no associated security.
+
+1351, 0x00000547, Indicates a Windows NT Server could not be contacted or that objects within the domain are protected such that necessary information could not be retrieved.
+
+1352, 0x00000548, The security account manager (SAM) or local security authority (LSA) server was in the wrong state to perform the security operation.
+
+1353, 0x00000549, The domain was in the wrong state to perform the security operation.
+
+1354, 0x0000054A, This operation is only allowed for the Primary Domain Controller of the domain.
+
+1355, 0x0000054B, The specified domain did not exist.
+
+1356, 0x0000054C, The specified domain already exists.
+
+1357, 0x0000054D, An attempt was made to exceed the limit on the number of domains per server.
+
+1358, 0x0000054E, Unable to complete the requested operation because of either a catastrophic media failure or a data structure corruption on the disk.
+
+1359, 0x0000054F, The security account database contains an internal inconsistency.
+
+1360, 0x00000550, Generic access types were contained in an access mask which should already be mapped to non-generic types.
+
+1361, 0x00000551, A security descriptor is not in the right format (absolute or self-relative).
+
+1362, 0x00000552, The requested action is restricted for use by logon processes only., The calling process has not registered as a logon process.
+
+1363, 0x00000553, Can not start a new logon session with an ID that is already in use.
+
+1364, 0x00000554, A specified authentication package is unknown.
+
+1365, 0x00000555, The logon session is not in a state that is consistent with the requested operation.
+
+1366, 0x00000556, The logon session ID is already in use.
+
+1367, 0x00000557, A logon request contained an invalid logon type value.
+
+1368, 0x00000558, Unable to impersonate via a named pipe until data has been read from that pipe.
+
+1369, 0x00000559, The transaction state of a Registry subtree is incompatible with the requested operation.
+
+1370, 0x0000055A, An internal security database corruption has been encountered.
+
+1371, 0x0000055B, Cannot perform this operation on built-in accounts.
+
+1372, 0x0000055C, Cannot perform this operation on this built-in special group.
+
+1373, 0x0000055D, Cannot perform this operation on this built-in special user.
+
+1374, 0x0000055E, The user cannot be removed from a group because the group is currently the user's primary group.
+
+1375, 0x0000055F, The token is already in use as a primary token.
+
+1376, 0x00000560, The specified local group does not exist.
+
+1377, 0x00000561, The specified account name is not a member of the local group.
+
+1378, 0x00000562, The specified account name is already a member of the local group.
+
+1379, 0x00000563, The specified local group already exists.
+
+1380, 0x00000564, Logon failure: the user has not been granted the requested logon type at this computer.
+
+1381, 0x00000565, The maximum number of secrets that may be stored in a single system has been exceeded.
+
+1382, 0x00000566, The length of a secret exceeds the maximum length allowed.
+
+1383, 0x00000567, The local security authority database contains an internal inconsistency.
+
+1384, 0x00000568, During a logon attempt, the user's security context accumulated too many security IDs.
+
+1385, 0x00000569, Logon failure: the user has not been granted the requested logon type at this computer.
+
+1386, 0x0000056A, A cross-encrypted password is necessary to change a user password.
+
+1387, 0x0000056B, A new member could not be added to a local group because the member does not exist.
+
+1388, 0x0000056C, A new member could not be added to a local group because the member has the wrong account type.
+
+1389, 0x0000056D, Too many security IDs have been specified.
+
+1390, 0x0000056E, A cross-encrypted password is necessary to change this user password.
+
+1391, 0x0000056F, Indicates an ACL contains no inheritable components
+
+1392, 0x00000570, The file or directory is corrupt and non-readable.
+
+1393, 0x00000571, The disk structure is corrupt and non-readable.
+
+1394, 0x00000572, There is no user session key for the specified logon session.
+
+1395, 0x00000573, The service being accessed is licensed for a particular number of connections. No more connections can be made to the service at this time because there are already as many connections as the service can accept.
+
+1400, 0x00000578, Invalid window handle.
+
+1401, 0x00000579, Invalid menu handle.
+
+1402, 0x0000057A, Invalid cursor handle.
+
+1403, 0x0000057B, Invalid accelerator table handle.
+
+1404, 0x0000057C, Invalid hook handle.
+
+1405, 0x0000057D, Invalid handle to a multiple-window position structure.
+
+1406, 0x0000057E, Cannot create a top-level child window.
+
+1407, 0x0000057F, Cannot find window class.
+
+1408, 0x00000580, Invalid window, belongs to other thread.
+
+1409, 0x00000581, Hot key is already registered.
+
+1410, 0x00000582, Class already exists.
+
+1411, 0x00000583, Class does not exist.
+
+1412, 0x00000584, Class still has open windows.
+
+1413, 0x00000585, Invalid index.
+
+1414, 0x00000586, Invalid icon handle.
+
+1415, 0x00000587, Using private DIALOG window words.
+
+1416, 0x00000588, The listbox identifier was not found.
+
+1417, 0x00000589, No wildcards were found.
+
+1418, 0x0000058A, Thread does not have a clipboard open.
+
+1419, 0x0000058B, Hot key is not registered.
+
+1420, 0x0000058C, The window is not a valid dialog window.
+
+1421, 0x0000058D, Control ID not found.
+
+1422, 0x0000058E, Invalid message for a combo box because it does not have an edit control.
+
+1423, 0x0000058F, The window is not a combo box.
+
+1424, 0x00000590, Height must be less than 256.
+
+1425, 0x00000591, Invalid device context (DC) handle.
+
+1426, 0x00000592, Invalid hook procedure type.
+
+1427, 0x00000593, Invalid hook procedure.
+
+1428, 0x00000594, Cannot set non-local hook without a module handle.
+
+1429, 0x00000595, This hook procedure can only be set globally.
+
+1430, 0x00000596, The journal hook procedure is already installed.
+
+1431, 0x00000597, The hook procedure is not installed.
+
+1432, 0x00000598, Invalid message for single-selection listbox.
+
+1433, 0x00000599, LB_SETCOUNT sent to non-lazy listbox.
+
+1434, 0x0000059A, This list box does not support tab stops.
+
+1435, 0x0000059B, Cannot destroy object created by another thread.
+
+1436, 0x0000059C, Child windows cannot have menus.
+
+1437, 0x0000059D, The window does not have a system menu.
+
+1438, 0x0000059E, Invalid message box style.
+
+1439, 0x0000059F, Invalid system-wide (SPI_*) parameter.
+
+1440, 0x000005A0, Screen already locked.
+
+1441, 0x000005A1, All handles to windows in a multiple-window position structure must have the same parent.
+
+1442, 0x000005A2, The window is not a child window.
+
+1443, 0x000005A3, Invalid GW_* command.
+
+1444, 0x000005A4, Invalid thread identifier.
+
+1445, 0x000005A5, Cannot process a message from a window that is not a multiple document interface (MDI) window.
+
+1446, 0x000005A6, Popup menu already active.
+
+1447, 0x000005A7, The window does not have scroll bars.
+
+1448, 0x000005A8, Scroll bar range cannot be greater than 0x7FFF.
+
+1449, 0x000005A9, Cannot show or remove the window in the way specified.
+
+1450, 0x000005AA, Insufficient system resources exist to complete the requested service.
+
+1451, 0x000005AB, Insufficient system resources exist to complete the requested service.
+
+1452, 0x000005AC, Insufficient system resources exist to complete the requested service.
+
+1453, 0x000005AD, Insufficient quota to complete the requested service.
+
+1454, 0x000005AE, Insufficient quota to complete the requested service.
+
+1455, 0x000005AF, The paging file is too small for this operation to complete.
+
+1456, 0x000005B0, A menu item was not found.
+
+1457, 0x000005B1, Invalid keyboard layout handle.
+
+1458, 0x000005B2, Hook type not allowed.
+
+1459, 0x000005B3, This operation requires an interactive window station.
+
+1460, 0x000005B4, This operation returned because the timeout period expired.
+
+1461, 0x000005B5, Invalid monitor handle.
+
+1500, 0x000005DC, The event log file is corrupt.
+
+1501, 0x000005DD, No event log file could be opened, so the event logging service did not start.
+
+1502, 0x000005DE, The event log file is full.
+
+1503, 0x000005DF, The event log file has changed between reads.
+
+1700, 0x000006A4, The string binding is invalid.
+
+1701, 0x000006A5, The binding handle is not the correct type.
+
+1702, 0x000006A6, The binding handle is invalid.
+
+1703, 0x000006A7, The RPC protocol sequence is not supported.
+
+1704, 0x000006A8, The RPC protocol sequence is invalid.
+
+1705, 0x000006A9, The string universal unique identifier (UUID) is invalid.
+
+1706, 0x000006AA, The endpoint format is invalid.
+
+1707, 0x000006AB, The network address is invalid.
+
+1708, 0x000006AC, No endpoint was found.
+
+1709, 0x000006AD, The timeout value is invalid.
+
+1710, 0x000006AE, The object universal unique identifier (UUID) was not found.
+
+1711, 0x000006AF, The object universal unique identifier (UUID) has already been registered.
+
+1712, 0x000006B0, The type universal unique identifier (UUID) has already been registered.
+
+1713, 0x000006B1, The RPC server is already listening.
+
+1714, 0x000006B2, No protocol sequences have been registered.
+
+1715, 0x000006B3, The RPC server is not listening.
+
+1716, 0x000006B4, The manager type is unknown.
+
+1717, 0x000006B5, The interface is unknown.
+
+1718, 0x000006B6, There are no bindings.
+
+1719, 0x000006B7, There are no protocol sequences.
+
+1720, 0x000006B8, The endpoint cannot be created.
+
+1721, 0x000006B9, Not enough resources are available to complete this operation.
+
+1722, 0x000006BA, The RPC server is unavailable.
+
+1723, 0x000006BB, The RPC server is too busy to complete this operation.
+
+1724, 0x000006BC, The network options are invalid.
+
+1725, 0x000006BD, There is not a remote procedure call active in this thread.
+
+1726, 0x000006BE, The remote procedure call failed.
+
+1727, 0x000006BF, The remote procedure call failed and did not execute.
+
+1728, 0x000006C0, A remote procedure call (RPC) protocol error occurred.
+
+1730, 0x000006C2, The transfer syntax is not supported by the RPC server.
+
+1732, 0x000006C4, The universal unique identifier (UUID) type is not supported.
+
+1733, 0x000006C5, The tag is invalid.
+
+1734, 0x000006C6, The array bounds are invalid.
+
+1735, 0x000006C7, The binding does not contain an entry name.
+
+1736, 0x000006C8, The name syntax is invalid.
+
+1737, 0x000006C9, The name syntax is not supported.
+
+1739, 0x000006CB, No network address is available to use to construct a universal unique identifier (UUID).
+
+1740, 0x000006CC, The endpoint is a duplicate.
+
+1741, 0x000006CD, The authentication type is unknown.
+
+1742, 0x000006CE, The maximum number of calls is too small.
+
+1743, 0x000006CF, The string is too long.
+
+1744, 0x000006D0, The RPC protocol sequence was not found.
+
+1745, 0x000006D1, The procedure number is out of range.
+
+1746, 0x000006D2, The binding does not contain any authentication information.
+
+1747, 0x000006D3, The authentication service is unknown.
+
+1748, 0x000006D4, The authentication level is unknown.
+
+1749, 0x000006D5, The security context is invalid.
+
+1750, 0x000006D6, The authorization service is unknown.
+
+1751, 0x000006D7, The entry is invalid.
+
+1752, 0x000006D8, The server endpoint cannot perform the operation.
+
+1753, 0x000006D9, There are no more endpoints available from the endpoint mapper.
+
+1754, 0x000006DA, No interfaces have been exported.
+
+1755, 0x000006DB, The entry name is incomplete.
+
+1756, 0x000006DC, The version option is invalid.
+
+1757, 0x000006DD, There are no more members.
+
+1758, 0x000006DE, There is nothing to unexport.
+
+1759, 0x000006DF, The interface was not found.
+
+1760, 0x000006E0, The entry already exists.
+
+1761, 0x000006E1, The entry is not found.
+
+1762, 0x000006E2, The name service is unavailable.
+
+1763, 0x000006E3, The network address family is invalid.
+
+1764, 0x000006E4, The requested operation is not supported.
+
+1765, 0x000006E5, No security context is available to allow impersonation.
+
+1766, 0x000006E6, An internal error occurred in a remote procedure call (RPC).
+
+1767, 0x000006E7, The RPC server attempted an integer division by zero.
+
+1768, 0x000006E8, An addressing error occurred in the RPC server.
+
+1769, 0x000006E9, A floating-point operation at the RPC server caused a division by zero.
+
+1770, 0x000006EA, A floating-point underflow occurred at the RPC server.
+
+1771, 0x000006EB, A floating-point overflow occurred at the RPC server.
+
+1772, 0x000006EC, The list of RPC servers available for the binding of auto handles has been exhausted.
+
+1773, 0x000006ED, Unable to open the character translation table file.
+
+1774, 0x000006EE, The file containing the character translation table has fewer than 512 bytes.
+
+1775, 0x000006EF, A null context handle was passed from the client to the host during a remote procedure call.
+
+1777, 0x000006F1, The context handle changed during a remote procedure call.
+
+1778, 0x000006F2, The binding handles passed to a remote procedure call do not match.
+
+1779, 0x000006F3, The stub is unable to get the remote procedure call handle.
+
+1780, 0x000006F4, A null reference pointer was passed to the stub.
+
+1781, 0x000006F5, The enumeration value is out of range.
+
+1782, 0x000006F6, The byte count is too small.
+
+1783, 0x000006F7, The stub received bad data.
+
+1784, 0x000006F8, The supplied user buffer is not valid for the requested operation.
+
+1785, 0x000006F9, The disk media is not recognized., It may not be formatted.
+
+1786, 0x000006FA, The workstation does not have a trust secret.
+
+1787, 0x000006FB, The SAM database on the Windows NT Server does not have a computer account for this workstation trust relationship.
+
+1788, 0x000006FC, The trust relationship between the primary domain and the trusted domain failed.
+
+1789, 0x000006FD, The trust relationship between this workstation and the primary domain failed.
+
+1790, 0x000006FE, The network logon failed.
+
+1791, 0x000006FF, A remote procedure call is already in progress for this thread.
+
+1792, 0x00000700, An attempt was made to logon, but the network logon service was not started.
+
+1793, 0x00000701, The user's account has expired.
+
+1794, 0x00000702, The redirector is in use and cannot be unloaded.
+
+1795, 0x00000703, The specified printer driver is already installed.
+
+1796, 0x00000704, The specified port is unknown.
+
+1797, 0x00000705, The printer driver is unknown.
+
+1798, 0x00000706, The print processor is unknown.
+
+1799, 0x00000707, The specified separator file is invalid.
+
+1800, 0x00000708, The specified priority is invalid.
+
+1801, 0x00000709, The printer name is invalid.
+
+1802, 0x0000070A, The printer already exists.
+
+1803, 0x0000070B, The printer command is invalid.
+
+1804, 0x0000070C, The specified datatype is invalid.
+
+1805, 0x0000070D, The Environment specified is invalid.
+
+1806, 0x0000070E, There are no more bindings.
+
+1807, 0x0000070F, The account used is an interdomain trust account., Use your global user account or local user account to access this server.
+
+1808, 0x00000710, The account used is a Computer Account., Use your global user account or local user account to access this server.
+
+1809, 0x00000711, The account used is an server trust account., Use your global user account or local user account to access this server.
+
+1810, 0x00000712, The name or security ID (SID) of the domain specified is inconsistent with the trust information for that domain.
+
+1811, 0x00000713, The server is in use and cannot be unloaded.
+
+1812, 0x00000714, The specified image file did not contain a resource section.
+
+1813, 0x00000715, The specified resource type can not be found in the image file.
+
+1814, 0x00000716, The specified resource name can not be found in the image file.
+
+1815, 0x00000717, The specified resource language ID cannot be found in the image file.
+
+1816, 0x00000718, Not enough quota is available to process this command.
+
+1817, 0x00000719, No interfaces have been registered.
+
+1818, 0x0000071A, The server was altered while processing this call.
+
+1819, 0x0000071B, The binding handle does not contain all required information.
+
+1820, 0x0000071C, Communications failure.
+
+1821, 0x0000071D, The requested authentication level is not supported.
+
+1822, 0x0000071E, No principal name registered.
+
+1823, 0x0000071F, The error specified is not a valid Windows NT RPC error code.
+
+1824, 0x00000720, A UUID that is valid only on this computer has been allocated.
+
+1825, 0x00000721, A security package specific error occurred.
+
+1826, 0x00000722, Thread is not cancelled.
+
+1827, 0x00000723, Invalid operation on the encoding/decoding handle.
+
+1828, 0x00000724, Incompatible version of the serializing package.
+
+1829, 0x00000725, Incompatible version of the RPC stub.
+
+1830, 0x00000726, The idl pipe object is invalid or corrupted.
+
+1831, 0x00000727, The operation is invalid for a given idl pipe object.
+
+1832, 0x00000728, The idl pipe version is not supported.
+
+1898, 0x0000076A, The group member was not found.
+
+1899, 0x0000076B, The endpoint mapper database could not be created.
+
+1900, 0x0000076C, The object universal unique identifier (UUID) is the nil UUID.
+
+1901, 0x0000076D, The specified time is invalid.
+
+1902, 0x0000076E, The specified Form name is invalid.
+
+1903, 0x0000076F, The specified Form size is invalid
+
+1904, 0x00000770, The specified Printer handle is already being waited on
+
+1905, 0x00000771, The specified Printer has been deleted
+
+1906, 0x00000772, The state of the Printer is invalid
+
+1907, 0x00000773, The user must change his password before he logs on the first time.
+
+1908, 0x00000774, Could not find the domain controller for this domain.
+
+1909, 0x00000775, The referenced account is currently locked out and may not be logged on to.
+
+1910, 0x00000776, The object exporter specified was not found.
+
+1911, 0x00000777, The object specified was not found.
+
+1912, 0x00000778, The object resolver set specified was not found.
+
+1913, 0x00000779, Some data remains to be sent in the request buffer.
+
+2000, 0x000007D0, The pixel format is invalid.
+
+2001, 0x000007D1, The specified driver is invalid.
+
+2002, 0x000007D2, The window style or class attribute is invalid for this operation.
+
+2003, 0x000007D3, The requested metafile operation is not supported.
+
+2004, 0x000007D4, The requested transformation operation is not supported.
+
+2005, 0x000007D5, The requested clipping operation is not supported.
+
+2108, 0x0000083C, The network connection was made successfully but the user had to be prompted for a password other than the one originally specified.
+
+2202, 0x0000089A, The specified username is invalid.
+
+2250, 0x000008CA, This network connection does not exist.
+
+2401, 0x00000961, This network connection has files open or requests pending.
+
+2402, 0x00000962, Active connections still exist.
+
+2404, 0x00000964, The device is in use by an active process and cannot be disconnected.
+
+3000, 0x00000BB8, The specified print monitor is unknown.
+
+3001, 0x00000BB9, The specified printer driver is currently in use.
+
+3002, 0x00000BBA, The spool file was not found.
+
+3003, 0x00000BBB, A StartDocPrinter call was not issued.
+
+3004, 0x00000BBC, An AddJob call was not issued.
+
+3005, 0x00000BBD, The specified print processor has already been installed.
+
+3006, 0x00000BBE, The specified print monitor has already been installed.
+
+3007, 0x00000BBF, The specified print monitor does not have the required functions.
+
+3008, 0x00000BC0, The specified print monitor is currently in use.
+
+3009, 0x00000BC1, The requested operation is not allowed when there are jobs queued to the printer.
+
+3010, 0x00000BC2, The requested operation is successful., Changes will not be effective until the system is rebooted.
+
+3011, 0x00000BC3, The requested operation is successful., Changes will not be effective until the service is restarted.
+
+4000, 0x00000FA0, WINS encountered an error while processing the command.
+
+4001, 0x00000FA1, The local WINS can not be deleted.
+
+4002, 0x00000FA2, The importation from the file failed.
+
+4003, 0x00000FA3, The backup Failed., Was a full backup done before ?
+
+4004, 0x00000FA4, The backup Failed., Check the directory that you are backing the database to.
+
+4005, 0x00000FA5, The name does not exist in the WINS database.
+
+4006, 0x00000FA6, Replication with a non-configured partner is not allowed.
+
+4100, 0x00001004, The DHCP client has obtained an IP address that is already in use on the network., The local interface will be disabled until the DHCP client can obtain a new address.
+
+5001, 0x00001389, The cluster resource cannot be moved to another group because other resources are dependent on it.
+
+5002, 0x0000138A, The cluster resource dependency cannot be found.
+
+5003, 0x0000138B, The cluster resource cannot be made dependent on the specified resource because it is already dependent.
+
+5004, 0x0000138C, The cluster resource is not online.
+
+5005, 0x0000138D, A cluster node is not available for this operation.
+
+5006, 0x0000138E, The cluster resource is not available.
+
+5007, 0x0000138F, The cluster resource could not be found.
+
+5008, 0x00001390, The cluster is being shut down.
+
+5009, 0x00001391, A cluster node cannot be evicted from the cluster while it is online.
+
+5010, 0x00001392, The object already exists.
+
+5011, 0x00001393, The object is already in the list.
+
+5012, 0x00001394, The cluster group is not available for any new requests.
+
+5013, 0x00001395, The cluster group could not be found.
+
+5014, 0x00001396, The operation could not be completed because the cluster group is not online.
+
+5015, 0x00001397, The cluster node is not the owner of the resource.
+
+5016, 0x00001398, The cluster node is not the owner of the group.
+
+5017, 0x00001399, The cluster resource could not be created in the specified resource monitor.
+
+5018, 0x0000139A, The cluster resource could not be brought online by the resource monitor.
+
+5019, 0x0000139B, The operation could not be completed because the cluster resource is online.
+
+5020, 0x0000139C, The cluster resource could not be deleted or brought offline because it is the quorum resource.
+
+5021, 0x0000139D, The cluster could not make the specified resource a quorum resource because it is not capable of being a quorum resource.
+
+5022, 0x0000139E, The cluster software is shutting down.
+
+5023, 0x0000139F, The group or resource is not in the correct state to perform the requested operation.
+
+5024, 0x000013A0, The properties were stored but not all changes will take effect until the next time the resource is brought online.
+
+5025, 0x000013A1, The cluster could not make the specified resource a quorum resource because it does not belong to a shared storage class.
+
+5026, 0x000013A2, The cluster resource could not be deleted since it is a core resource.
+
+5027, 0x000013A3, The quorum resource failed to come online.
+
+5028, 0x000013A4, The quorum log could not be created or mounted successfully.
+
+5029, 0x000013A5, The cluster log is corrupt.
+
+5030, 0x000013A6, The record could not be written to the cluster log since it exceeds the maximum size.
+
+5031, 0x000013A7, The cluster log exceeds its maximum size.
+
+5032, 0x000013A8, No checkpoint record was found in the cluster log.
+
+5033, 0x000013A9, The minimum required disk space needed for logging is not available.
+
+6118, 0x000017E6, The list of servers for this workgroup is not currently available
+
+Miscellaneous error codes
+196608, 0x00030000, Require mutual authentication with the server (RLPOLICY_AUTHENTICATE_MUTUAL_ONLY)
+
+197120, 0x00030200, The underlying file was converted to compound file format.
+
+197121, 0x00030201, The storage operation should block until more data is available.
+
+197122, 0x00030202, The storage operation should retry immediately.
+
+197123, 0x00030203, The notified event sink will not influence the storage operation.
+
+262144, 0x00040000, Use the registry database to provide the requested information
+
+262145, 0x00040001, Success, but static
+
+262146, 0x00040002, Macintosh clipboard format
+
+262400, 0x00040100, Successful drop took place
+
+262401, 0x00040101, Drag-drop operation canceled
+
+262402, 0x00040102, Use the default cursor
+
+262448, 0x00040130, Data has same FORMATETC
+
+262464, 0x00040140, View is already frozen
+
+262512, 0x00040170, FORMATETC not supported
+
+262513, 0x00040171, Same cache
+
+262514, 0x00040172, Some cache(s) not updated
+
+262528, 0x00040180, Invalid verb for OLE object
+
+262529, 0x00040181, Verb number is valid but verb cannot be done now
+
+262530, 0x00040182, Invalid window handle passed
+
+262560, 0x000401A0, Message is too long; some of it had to be truncated before displaying
+
+262592, 0x000401C0, Unable to convert OLESTREAM to IStorage
+
+262626, 0x000401E2, Moniker reduced to itself
+
+262628, 0x000401E4, Common prefix is this moniker
+
+262629, 0x000401E5, Common prefix is input moniker
+
+262630, 0x000401E6, Common prefix is both monikers
+
+262631, 0x000401E7, Moniker is already registered in running object table
+
+262631, 0x00042000
+
+OLE (Object Linking and Embedding) Errors
+-2147483647, 0x80000001, Not implemented
+
+-2147483646, 0x80000002, Ran out of memory
+
+-2147483645, 0x80000003, One or more arguments are invalid
+
+-2147483644, 0x80000004, No such interface supported
+
+-2147483643, 0x80000005, Invalid pointer
+
+-2147483642, 0x80000006, Invalid handle
+
+-2147483641, 0x80000007, Operation aborted
+
+-2147483640, 0x80000008, Unspecified error
+
+-2147483639, 0x80000009, General access denied error
+
+-2147483638, 0x8000000A, The data necessary to complete this operation is not yet available.
+
+-2147467263, 0x80004001, Not implemented
+
+-2147467262, 0x80004002, No such interface supported
+
+-2147467261, 0x80004003, Invalid pointer
+
+-2147467260, 0x80004004, Operation aborted
+
+-2147467259, 0x80004005, Unspecified error
+
+-2147467258, 0x80004006, Thread local storage failure
+
+-2147467257, 0x80004007, Get shared memory allocator failure
+
+-2147467256, 0x80004008, Get memory allocator failure
+
+-2147467255, 0x80004009, Unable to initialize class cache
+
+-2147467254, 0x8000400A, Unable to initialize RPC services
+
+-2147467253, 0x8000400B, Cannot set thread local storage channel control
+
+-2147467252, 0x8000400C, Could not allocate thread local storage channel control
+
+-2147467251, 0x8000400D, The user supplied memory allocator is unacceptable
+
+-2147467250, 0x8000400E, The OLE service mutex already exists
+
+-2147467249, 0x8000400F, The OLE service file mapping already exists
+
+-2147467248, 0x80004010, Unable to map view of file for OLE service
+
+-2147467247, 0x80004011, Failure attempting to launch OLE service
+
+-2147467246, 0x80004012, There was an attempt to call CoInitialize a second time while single threaded
+
+-2147467245, 0x80004013, A Remote activation was necessary but was not allowed
+
+-2147467244, 0x80004014, A Remote activation was necessary but the server name provided was invalid
+
+-2147467243, 0x80004015, The class is configured to run as a security id different from the caller
+
+-2147467242, 0x80004016, Use of Ole1 services requiring DDE windows is disabled
+
+-2147467241, 0x80004017, A RunAs specification must be <domain name>\<user name> or simply <user name>
+
+-2147467240, 0x80004018, The server process could not be started., The pathname may be incorrect.
+
+-2147467239, 0x80004019, The server process could not be started as the configured identity., The pathname may be incorrect or unavailable.
+
+-2147467238, 0x8000401A, The server process could not be started because the configured identity is incorrect., Check the username and password.
+
+-2147467237, 0x8000401B, The client is not allowed to launch this server.
+
+-2147467236, 0x8000401C, The service providing this server could not be started.
+
+-2147467235, 0x8000401D, This computer was unable to communicate with the computer providing the server.
+
+-2147467234, 0x8000401E, The server did not respond after being launched.
+
+-2147467233, 0x8000401F, The registration information for this server is inconsistent or incomplete.
+
+-2147467232, 0x80004020, The registration information for this interface is inconsistent or incomplete.
+
+-2147467231, 0x80004021, The operation attempted is not supported.
+
+Windows Based Enterprise Management (WBEM) error codes
+-2147749889, 0x80041001, The call failed.
+
+-2147749890, 0x80041002, The object could not be found.
+
+-2147749891, 0x80041003, The current user does not have permission to perform the action.
+
+-2147749892, 0x80041004, The provider has failed at some time other than during initialization.
+
+-2147749893, 0x80041005, A type mismatch occurred.
+
+-2147749894, 0x80041006, There was not enough memory for the operation.
+
+-2147749895, 0x80041007, The IWbemContext object is not valid.
+
+-2147749896, 0x80041008, One of the parameters to the call is not correct.
+
+-2147749897, 0x80041009, The resource, typically a remote server, is not currently available.
+
+-2147749898, 0x8004100A, An internal, critical, and unexpected error occurred. Report this error to Microsoft Product Support Services.
+
+-2147749899, 0x8004100B, One or more network packets were corrupted during a remote session.
+
+-2147749900, 0x8004100C, The feature or operation is not supported.
+
+-2147749901, 0x8004100D, The superclass specified is not valid.
+
+-2147749902, 0x8004100E, The namespace specified could not be found.
+
+-2147749903, 0x8004100F, The specified instance is not valid.
+
+-2147749904, 0x80041010, The specified class is not valid.
+
+-2147749905, 0x80041011, A provider referenced in the schema does not have a corresponding registration.
+
+-2147749908, 0x80041014, A component, such as a provider, failed to initialize for internal reasons.
+
+-2147749909, 0x80041015, A networking error that prevents normal operation has occurred.
+
+-2147749910, 0x80041016, The requested operation is not valid. This error usually applies to invalid attempts to delete classes or properties.
+
+-2147749911, 0x80041017, The query was not syntactically valid.
+
+-2147749912, 0x80041018, The requested query language is not supported.
+
+-2147418113, 0x8000FFFF, Catastrophic failure
+
+-2147418111, 0x80010001, Call was rejected by callee.
+
+-2147418110, 0x80010002, Call was canceled by the message filter.
+
+-2147418109, 0x80010003, The caller is dispatching an intertask SendMessage call and cannot call out via PostMessage.
+
+-2147418108, 0x80010004, The caller is dispatching an asynchronous call and cannot make an outgoing call on behalf of this call.
+
+-2147418107, 0x80010005, It is illegal to call out while inside message filter.
+
+-2147418106, 0x80010006, The connection terminated or is in a bogus state and cannot be used any more. Other connections are still valid.
+
+-2147418105, 0x80010007, The callee (server [not server application]) is not available and disappeared; all connections are invalid., The call may have executed.
+
+-2147418104, 0x80010008, The caller (client) disappeared while the callee (server) was processing a call.
+
+-2147418103, 0x80010009, The data packet with the marshaled parameter data is incorrect.
+
+-2147418102, 0x8001000A, The call was not transmitted properly; the message queue was full and was not emptied after yielding.
+
+-2147418101, 0x8001000B, The client (caller) cannot marshal the parameter data - low memory, etc.
+
+-2147418100, 0x8001000C, The client (caller) cannot un-marshal the return data - low memory, etc.
+
+-2147418099, 0x8001000D, The server (callee) cannot marshal the return data - low memory, etc.
+
+-2147418098, 0x8001000E, The server (callee) cannot un-marshal the parameter data - low memory, etc.
+
+-2147418097, 0x8001000F, Received data is invalid; could be server or client data.
+
+-2147418096, 0x80010010, A particular parameter is invalid and cannot be (un)marshaled.
+
+-2147418095, 0x80010011, There is no second outgoing call on same channel in DDE conversation.
+
+-2147418094, 0x80010012, The callee (server [not server application]) is not available and disappeared; all connections are invalid., The call did not execute.
+
+-2147417856, 0x80010100, System call failed.
+
+-2147417855, 0x80010101, Could not allocate some required resource (memory, events, ...)
+
+-2147417854, 0x80010102, Attempted to make calls on more than one thread in single threaded mode.
+
+-2147417853, 0x80010103, The requested interface is not registered on the server object.
+
+-2147417852, 0x80010104, RPC could not call the server or could not return the results of calling the server.
+
+-2147417851, 0x80010105, The server threw an exception.
+
+-2147417850, 0x80010106, Cannot change thread mode after it is set.
+
+-2147417849, 0x80010107, The method called does not exist on the server.
+
+-2147417848, 0x80010108, The object invoked has disconnected from its clients.
+
+-2147417847, 0x80010109, The object invoked chose not to process the call now., Try again later.
+
+-2147417846, 0x8001010A, The message filter indicated that the application is busy.
+
+-2147417845, 0x8001010B, The message filter rejected the call.
+
+-2147417844, 0x8001010C, A call control interfaces was called with invalid data.
+
+-2147417843, 0x8001010D, An outgoing call cannot be made since the application is dispatching an input-synchronous call.
+
+-2147417842, 0x8001010E, The application called an interface that was marshaled for a different thread.
+
+-2147417841, 0x8001010F, CoInitialize has not been called on the current thread.
+
+-2147417840, 0x80010110, The version of OLE on the client and server machines does not match.
+
+-2147417839, 0x80010111, OLE received a packet with an invalid header.
+
+-2147417838, 0x80010112, OLE received a packet with an invalid extension.
+
+-2147417837, 0x80010113, The requested object or interface does not exist.
+
+-2147417836, 0x80010114, The requested object does not exist.
+
+-2147417835, 0x80010115, OLE has sent a request and is waiting for a reply.
+
+-2147417834, 0x80010116, OLE is waiting before retrying a request.
+
+-2147417833, 0x80010117, Call context cannot be accessed after call completed.
+
+-2147417832, 0x80010118, Impersonate on un-secure calls is not supported.
+
+-2147417831, 0x80010119, Security must be initialized before any interfaces are marshaled or un-marshaled., It cannot be changed once initialized.
+
+-2147417830, 0x8001011A, No security packages are installed on this machine or the user is not logged on or there are no compatible security packages between the client and server.
+
+-2147417829, 0x8001011B, Access is denied.
+
+-2147417828, 0x8001011C, Remote calls are not allowed for this process.
+
+-2147417827, 0x8001011D, The marshaled interface data packet (OBJREF) has an invalid or unknown format.
+
+-2147352577, 0x8001FFFF, An internal error occurred.
+
+-2147352575, 0x80020001, Unknown interface.
+
+-2147352573, 0x80020003, Member not found.
+
+-2147352572, 0x80020004, Parameter not found.
+
+-2147352571, 0x80020005, Type mismatch.
+
+-2147352570, 0x80020006, Unknown name.
+
+-2147352569, 0x80020007, No named arguments.
+
+-2147352568, 0x80020008, Bad variable type.
+
+-2147352567, 0x80020009, Exception occurred.
+
+-2147352566, 0x8002000A, Out of present range.
+
+-2147352565, 0x8002000B, Invalid index.
+
+-2147352564, 0x8002000C, Unknown language.
+
+-2147352563, 0x8002000D, Memory is locked.
+
+-2147352562, 0x8002000E, Invalid number of parameters.
+
+-2147352561, 0x8002000F, Parameter not optional.
+
+-2147352560, 0x80020010, Invalid callee.
+
+-2147352559, 0x80020011, Does not support a collection.
+
+-2147319786, 0x80028016, Buffer too small.
+
+-2147319784, 0x80028018, Old format or invalid type library.
+
+-2147319783, 0x80028019, Old format or invalid type library.
+
+-2147319780, 0x8002801C, Error accessing the OLE registry.
+
+-2147319779, 0x8002801D, Library not registered.
+
+-2147319769, 0x80028027, Bound to unknown type.
+
+-2147319768, 0x80028028, Qualified name disallowed.
+
+-2147319767, 0x80028029, Invalid forward reference, or reference to un-compiled type.
+
+-2147319766, 0x8002802A, Type mismatch.
+
+-2147319765, 0x8002802B, Element not found.
+
+-2147319764, 0x8002802C, Ambiguous name.
+
+-2147319763, 0x8002802D, Name already exists in the library.
+
+-2147319762, 0x8002802E, Unknown LCID.
+
+-2147319761, 0x8002802F, Function not defined in specified DLL.
+
+-2147317571, 0x800288BD, Wrong module kind for the operation.
+
+-2147317563, 0x800288C5, Size may not exceed 64K.
+
+-2147317562, 0x800288C6, Duplicate ID in inheritance hierarchy.
+
+-2147317553, 0x800288CF, Incorrect inheritance depth in standard OLE hmember.
+
+-2147316576, 0x80028CA0, Type mismatch.
+
+-2147316575, 0x80028CA1, Invalid number of arguments.
+
+-2147316574, 0x80028CA2, I/O Error.
+
+-2147316573, 0x80028CA3, Error creating unique tmp file.
+
+-2147312566, 0x80029C4A, Error loading type library/DLL.
+
+-2147312509, 0x80029C83, Inconsistent property functions.
+
+-2147312508, 0x80029C84, Circular dependency between types/modules.
+
+-2147287039, 0x80030001, Unable to perform requested operation.
+
+-2147287038, 0x80030002, %1 could not be found.
+
+-2147287037, 0x80030003, The path %1 could not be found.
+
+-2147287036, 0x80030004, There are insufficient resources to open another file.
+
+-2147287035, 0x80030005, Access Denied.
+
+-2147287034, 0x80030006, Attempted an operation on an invalid object.
+
+-2147287032, 0x80030008, There is insufficient memory available to complete operation.
+
+-2147287031, 0x80030009, Invalid pointer error.
+
+-2147287022, 0x80030012, There are no more entries to return.
+
+-2147287021, 0x80030013, Disk is write-protected.
+
+-2147287015, 0x80030019, An error occurred during a seek operation.
+
+-2147287011, 0x8003001D, A disk error occurred during a write operation.
+
+-2147287010, 0x8003001E, A disk error occurred during a read operation.
+
+-2147287008, 0x80030020, A share violation has occurred.
+
+-2147287007, 0x80030021, A lock violation has occurred.
+
+-2147286960, 0x80030050, %1 already exists.
+
+-2147286953, 0x80030057, Invalid parameter error.
+
+-2147286928, 0x80030070, There is insufficient disk space to complete operation.
+
+-2147286800, 0x800300F0, Illegal write of non-simple property to simple property set.
+
+-2147286790, 0x800300FA, An API call exited abnormally.
+
+-2147286789, 0x800300FB, The file %1 is not a valid compound file.
+
+-2147286788, 0x800300FC, The name %1 is not valid.
+
+-2147286787, 0x800300FD, An unexpected error occurred.
+
+-2147286786, 0x800300FE, That function is not implemented.
+
+-2147286785, 0x800300FF, Invalid flag error.
+
+-2147286784, 0x80030100, Attempted to use an object that is busy.
+
+-2147286783, 0x80030101, The storage has been changed since the last commit.
+
+-2147286782, 0x80030102, Attempted to use an object that has ceased to exist.
+
+-2147286781, 0x80030103, Can't save.
+
+-2147286780, 0x80030104, The compound file %1 was produced with an incompatible version of storage.
+
+-2147286779, 0x80030105, The compound file %1 was produced with a newer version of storage.
+
+-2147286778, 0x80030106, Share.exe or equivalent is required for operation.
+
+-2147286777, 0x80030107, Illegal operation called on non-file based storage.
+
+-2147286776, 0x80030108, Illegal operation called on object with extant marshallings.
+
+-2147286775, 0x80030109, The docfile has been corrupted.
+
+-2147286768, 0x80030110, OLE32.DLL has been loaded at the wrong address.
+
+-2147286527, 0x80030201, The file download was aborted abnormally., The file is incomplete.
+
+-2147286526, 0x80030202, The file download has been terminated.
+
+-2147221504, 0x80040000, Invalid OLEVERB structure
+
+-2147221503, 0x80040001, Invalid advice flags
+
+-2147221502, 0x80040002, Can't enumerate any more, because the associated data is missing
+
+-2147221501, 0x80040003, This implementation doesn't take advises
+
+-2147221500, 0x80040004, There is no connection for this connection ID
+
+-2147221499, 0x80040005, Need to run the object to perform this operation
+
+-2147221498, 0x80040006, There is no cache to operate on
+
+-2147221497, 0x80040007, Un-initialized object
+
+-2147221496, 0x80040008, Linked object's source class has changed
+
+-2147221495, 0x80040009, Not able to get the moniker of the object
+
+-2147221494, 0x8004000A, Not able to bind to the source
+
+-2147221493, 0x8004000B, Object is static; operation not allowed
+
+-2147221492, 0x8004000C, User cancelled out of save dialog
+
+-2147221491, 0x8004000D, Invalid rectangle
+
+-2147221490, 0x8004000E, compobj.dll is too old for the ole2.dll initialized
+
+-2147221489, 0x8004000F, Invalid window handle
+
+-2147221488, 0x80040010, Object is not in any of the inplace active states
+
+-2147221487, 0x80040011, Not able to convert object
+
+-2147221486, 0x80040012, Not able to perform the operation because object is not given storage yet
+
+-2147221404, 0x80040064, Invalid FORMATETC structure
+
+-2147221403, 0x80040065, Invalid DVTARGETDEVICE structure
+
+-2147221402, 0x80040066, Invalid STDGMEDIUM structure
+
+-2147221401, 0x80040067, Invalid STATDATA structure
+
+-2147221400, 0x80040068, Invalid lindex
+
+-2147221399, 0x80040069, Invalid tymed
+
+-2147221398, 0x8004006A, Invalid clipboard format
+
+-2147221397, 0x8004006B, Invalid aspect(s)
+
+-2147221396, 0x8004006C, tdSize parameter of the DVTARGETDEVICE structure is invalid
+
+-2147221395, 0x8004006D, Object doesn't support IViewObject interface
+
+-2147221248, 0x80040100, Trying to revoke a drop target that has not been registered
+
+-2147221247, 0x80040101, This window has already been registered as a drop target
+
+-2147221246, 0x80040102, Invalid window handle
+
+-2147221232, 0x80040110, Class does not support aggregation (or class object is remote)
+
+-2147221231, 0x80040111, ClassFactory cannot supply requested class
+
+-2147221184, 0x80040140, Error drawing view
+
+-2147221168, 0x80040150, Could not read key from registry
+
+-2147221167, 0x80040151, Could not write key to registry
+
+-2147221166, 0x80040152, Could not find the key in the registry
+
+-2147221165, 0x80040153, Invalid value for registry
+
+-2147221164, 0x80040154, Class not registered
+
+-2147221163, 0x80040155, Interface not registered
+
+-2147221136, 0x80040170, Cache not updated
+
+-2147221120, 0x80040180, No verbs for OLE object
+
+-2147221119, 0x80040181, Invalid verb for OLE object
+
+-2147221088, 0x800401A0, Undo is not available
+
+-2147221087, 0x800401A1, Space for tools is not available
+
+-2147221056, 0x800401C0, OLESTREAM Get method failed
+
+-2147221055, 0x800401C1, OLESTREAM Put method failed
+
+-2147221054, 0x800401C2, Contents of the OLESTREAM not in correct format
+
+-2147221053, 0x800401C3, There was an error in a Windows GDI call while converting the bitmap to a DIB
+
+-2147221052, 0x800401C4, Contents of the IStorage not in correct format
+
+-2147221051, 0x800401C5, Contents of IStorage is missing one of the standard streams
+
+-2147221050, 0x800401C6, There was an error in a Windows GDI call while converting the DIB to a bitmap.
+
+-2147221040, 0x800401D0, OpenClipboard Failed
+
+-2147221039, 0x800401D1, EmptyClipboard Failed
+
+-2147221038, 0x800401D2, SetClipboard Failed
+
+-2147221037, 0x800401D3, Data on clipboard is invalid
+
+-2147221036, 0x800401D4, CloseClipboard Failed
+
+-2147221024, 0x800401E0, Moniker needs to be connected manually
+
+-2147221023, 0x800401E1, Operation exceeded deadline
+
+-2147221022, 0x800401E2, Moniker needs to be generic
+
+-2147221021, 0x800401E3, Operation unavailable
+
+-2147221020, 0x800401E4, Invalid syntax
+
+-2147221019, 0x800401E5, No object for moniker
+
+-2147221018, 0x800401E6, Bad extension for file
+
+-2147221017, 0x800401E7, Intermediate operation failed
+
+-2147221016, 0x800401E8, Moniker is not bindable
+
+-2147221015, 0x800401E9, Moniker is not bound
+
+-2147221014, 0x800401EA, Moniker cannot open file
+
+-2147221013, 0x800401EB, User input required for operation to succeed
+
+-2147221012, 0x800401EC, Moniker class has no inverse
+
+-2147221011, 0x800401ED, Moniker does not refer to storage
+
+-2147221010, 0x800401EE, No common prefix
+
+-2147221009, 0x800401EF, Moniker could not be enumerated
+
+-2147221008, 0x800401F0, CoInitialize has not been called.
+
+-2147221007, 0x800401F1, CoInitialize has already been called.
+
+-2147221006, 0x800401F2, Class of object cannot be determined
+
+-2147221005, 0x800401F3, Invalid class string
+
+-2147221004, 0x800401F4, Invalid interface string
+
+-2147221003, 0x800401F5, Application not found
+
+-2147221002, 0x800401F6, Application cannot be run more than once
+
+-2147221001, 0x800401F7, Some error in application program
+
+-2147221000, 0x800401F8, DLL for class not found
+
+-2147220999, 0x800401F9, Error in the DLL
+
+-2147220998, 0x800401FA, Wrong OS or OS version for application
+
+-2147220997, 0x800401FB, Object is not registered
+
+-2147220996, 0x800401FC, Object is already registered
+
+-2147220995, 0x800401FD, Object is not connected to server
+
+-2147220994, 0x800401FE, Application was launched but it didn't register a class factory
+
+-2147220993, 0x800401FF, Object has been released
+
+-2147220992, 0x80040200, Unable to impersonate DCOM client
+
+-2147220991, 0x80040201, Unable to obtain server's security context
+
+-2147220990, 0x80040202, Unable to open the access token of the current thread
+
+-2147220989, 0x80040203, Unable to obtain user info from an access token
+
+-2147220988, 0x80040204, The client who called IAccessControl::IsAccessPermitted was the trustee provided tot he method
+
+-2147220987, 0x80040205, Unable to obtain the client's security blanket
+
+-2147220986, 0x80040206, Unable to set a discretionary ACL into a security descriptor
+
+-2147220985, 0x80040207, The system function, AccessCheck, returned false
+
+-2147220984, 0x80040208, Either NetAccessDel or NetAccessAdd returned an error code.
+
+-2147220983, 0x80040209, One of the trustee strings provided by the user did not conform to the <Domain>\<Name> syntax and it was not the "*" string
+
+-2147220982, 0x8004020A, One of the security identifiers provided by the user was invalid
+
+-2147220981, 0x8004020B, Unable to convert a wide character trustee string to a multibyte trustee string
+
+-2147220980, 0x8004020C, Unable to find a security identifier that corresponds to a trustee string provided by the user
+
+-2147220979, 0x8004020D, The system function, LookupAccountSID, failed
+
+-2147220978, 0x8004020E, Unable to find a trustee name that corresponds to a security identifier provided by the user
+
+-2147220977, 0x8004020F, The system function, LookupAccountName, failed
+
+-2147220976, 0x80040210, Unable to set or reset a serialization handle
+
+-2147220975, 0x80040211, Unable to obtain the Windows directory
+
+-2147220974, 0x80040212, Path too long
+
+-2147220973, 0x80040213, Unable to generate a uuid.
+
+-2147220972, 0x80040214, Unable to create file
+
+-2147220971, 0x80040215, Unable to close a serialization handle or a file handle.
+
+-2147220970, 0x80040216, The number of ACEs in an ACL exceeds the system limit
+
+-2147220969, 0x80040217, Not all the DENY_ACCESS ACEs are arranged in front of the GRANT_ACCESS ACEs in the stream
+
+-2147220968, 0x80040218, The version of ACL format in the stream is not supported by this implementation of IAccessControl
+
+-2147220967, 0x80040219, Unable to open the access token of the server process
+
+-2147220966, 0x8004021A, Unable to decode the ACL in the stream provided by the user
+
+-2147220965, 0x8004021B, The COM IAccessControl object is not initialized
+
+The Win32 Error Codes for ADSI.
+The HRESULT values 0x8007XXXX format, where the XXXX value corresponds to the DWORD values of the appropriate Win32 error code. You can use the net helpmsg xxxx to display a text explanation of what this error code means.
+
+-2147024896, 0x80070000, The operation completed successfully.
+
+-2147024895, 0x80070001, Incorrect function.
+
+-2147024894, 0x80070002, The system cannot find the file specified.
+
+-2147024893, 0x80070003, The system cannot find the path specified.
+
+-2147024892, 0x80070004, The system cannot open the file.
+
+-2147024891, 0x80070005, Access is denied.
+
+-2147024890, 0x80070006, The handle is invalid.
+
+-2147024889, 0x80070007, The storage control blocks were destroyed.
+
+-2147024888, 0x80070008, Not enough storage is available to process this command.
+
+-2147024887, 0x80070009, The storage control block address is invalid.
+
+-2147024886, 0x8007000A, The environment is incorrect.
+
+-2147024885, 0x8007000B, An attempt was made to load a program with an incorrect format.
+
+-2147024884, 0x8007000C, The access code is invalid.
+
+-2147024883, 0x8007000D, The data is invalid.
+
+-2147024882, 0x8007000E, Not enough storage is available to complete this operation.
+
+-2147024881, 0x8007000F, The system cannot find the drive specified.
+
+-2147024880, 0x80070010, The directory cannot be removed.
+
+-2147024879, 0x80070011, The system cannot move the file to a different disk drive.
+
+-2147024878, 0x80070012, There are no more files.
+
+-2147024877, 0x80070013, The media is write protected.
+
+-2147024876, 0x80070014, The system cannot find the device specified.
+
+-2147024875, 0x80070015, The device is not ready.
+
+-2147024874, 0x80070016, The device does not recognize the command.
+
+-2147024873, 0x80070017, Data error (cyclic redundancy check)
+
+-2147024872, 0x80070018, The program issued a command but the command length is incorrect.
+
+-2147024871, 0x80070019, The drive cannot locate a specific area or track on the disk.
+
+-2147024870, 0x8007001A, The specified disk or diskette cannot be accessed.
+
+-2147024869, 0x8007001B, The drive cannot find the sector requested.
+
+-2147024868, 0x8007001C, The printer is out of paper.
+
+-2147024867, 0x8007001D, The system cannot write to the specified device.
+
+-2147024866, 0x8007001E, The system cannot read from the specified device.
+
+-2147024865, 0x8007001F, A device attached to the system is not functioning.
+
+-2147024864, 0x80070020, The process cannot access the file because it is being used by another process.
+
+-2147024863, 0x80070021, The process cannot access the file because another process has locked a portion of the file.
+
+-2147024862, 0x80070022, The wrong diskette is in the drive. Insert %2 (Volume Serial Number: %3) into drive %1.
+
+-2147024860, 0x80070024, Too many files opened for sharing.
+
+-2147024858, 0x80070026, Reached end of file.
+
+-2147024857, 0x80070027, The disk is full.
+
+-2147024846, 0x80070032, The network request is not supported.
+
+-2147024845, 0x80070033, The remote computer is not available.
+
+-2147024844, 0x80070034, A duplicate name exists on the network.
+
+-2147024843, 0x80070035, The network path was not found.
+
+-2147024842, 0x80070036, The network is busy.
+
+-2147024841, 0x80070037, The specified network resource or device is no longer available.
+
+-2147024840, 0x80070038, The network BIOS command limit has been reached.
+
+-2147024839, 0x80070039, A network adapter hardware error occurred.
+
+-2147024838, 0x8007003A, The specified server cannot perform the requested operation.
+
+-2147024837, 0x8007003B, An unexpected network error occurred.
+
+-2147024836, 0x8007003C, The remote adapter is not compatible.
+
+-2147024835, 0x8007003D, The printer queue is full.
+
+-2147024834, 0x8007003E, Space to store the file waiting to be printed is not available on the server.
+
+-2147024833, 0x8007003F, Your file waiting to be printed was deleted.
+
+-2147024832, 0x80070040, The specified network name is no longer available.
+
+-2147024831, 0x80070041, Network access is denied.
+
+-2147024830, 0x80070042, The network resource type is not correct.
+
+-2147024829, 0x80070043, The network name cannot be found.
+
+-2147024828, 0x80070044, The name limit for the local computer network adapter card was exceeded.
+
+-2147024827, 0x80070045, The network BIOS session limit was exceeded.
+
+-2147024826, 0x80070046, The remote server has been paused or is in the process of being started.
+
+-2147024825, 0x80070047, No more connections can be made to this remote computer at this time because there are already as many connections as the computer can accept.
+
+-2147024824, 0x80070048, The specified printer or disk device has been paused.
+
+-2147024816, 0x80070050, The file exists.
+
+-2147024814, 0x80070052, The directory or file cannot be created.
+
+-2147024813, 0x80070053, Fail on INT 24
+
+-2147024812, 0x80070054, Storage to process this request is not available.
+
+-2147024811, 0x80070055, The local device name is already in use.
+
+-2147024810, 0x80070056, The specified network password is not correct.
+
+-2147024809, 0x80070057, The parameter is incorrect.
+
+-2147024808, 0x80070058, A write fault occurred on the network.
+
+-2147024807, 0x80070059, The system cannot start another process at this time.
+
+-2147024796, 0x80070064, Cannot create another system semaphore.
+
+-2147024795, 0x80070065, The exclusive semaphore is owned by another process.
+
+-2147024794, 0x80070066, The semaphore is set and cannot be closed.
+
+-2147024793, 0x80070067, The semaphore cannot be set again.
+
+-2147024792, 0x80070068, Cannot request exclusive semaphores at interrupt time.
+
+-2147024791, 0x80070069, The previous ownership of this semaphore has ended.
+
+-2147024790, 0x8007006A, Insert the diskette for drive %1.
+
+-2147024789, 0x8007006B, Program stopped because alternate diskette was not inserted.
+
+-2147024788, 0x8007006C, The disk is in use or locked by another process.
+
+-2147024787, 0x8007006D, The pipe has been ended.
+
+-2147024786, 0x8007006E, The system cannot open the device or file specified.
+
+-2147024785, 0x8007006F, The file name is too long.
+
+-2147024784, 0x80070070, There is not enough space on the disk.
+
+-2147024783, 0x80070071, No more internal file identifiers available.
+
+-2147024782, 0x80070072, The target internal file identifier is incorrect.
+
+-2147024779, 0x80070075, The IOCTL call made by the application program is not correct.
+
+-2147024778, 0x80070076, The verify-on-write switch parameter value is not correct.
+
+-2147024777, 0x80070077, The system does not support the command requested.
+
+-2147024776, 0x80070078, This function is only valid in Windows NT mode.
+
+-2147024775, 0x80070079, The semaphore timeout period has expired.
+
+-2147024774, 0x8007007A, The data area passed to a system call is too small.
+
+-2147024773, 0x8007007B, The filename, directory name, or volume label syntax is incorrect.
+
+-2147024772, 0x8007007C, The system call level is not correct.
+
+-2147024771, 0x8007007D, The disk has no volume label.
+
+-2147024770, 0x8007007E, The specified module could not be found.
+
+-2147024769, 0x8007007F, The specified procedure could not be found.
+
+-2147024768, 0x80070080, There are no child processes to wait for.
+
+-2147024767, 0x80070081, The %1 application cannot be run in Windows NT mode.
+
+-2147024766, 0x80070082, Attempt to use a file handle to an open disk partition for an operation other than raw disk I/O.
+
+-2147024765, 0x80070083, An attempt was made to move the file pointer before the beginning of the file.
+
+-2147024764, 0x80070084, The file pointer cannot be set on the specified device or file.
+
+-2147024763, 0x80070085, A JOIN or SUBST command cannot be used for a drive that contains previously joined drives.
+
+-2147024762, 0x80070086, An attempt was made to use a JOIN or SUBST command on a drive that has already been joined.
+
+-2147024761, 0x80070087, An attempt was made to use a JOIN or SUBST command on a drive that has already been substituted.
+
+-2147024760, 0x80070088, The system tried to delete the JOIN of a drive that is not joined.
+
+-2147024759, 0x80070089, The system tried to delete the substitution of a drive that is not substituted.
+
+-2147024758, 0x8007008A, The system tried to join a drive to a directory on a joined drive.
+
+-2147024757, 0x8007008B, The system tried to substitute a drive to a directory on a substituted drive.
+
+-2147024756, 0x8007008C, The system tried to join a drive to a directory on a substituted drive.
+
+-2147024755, 0x8007008D, The system tried to SUBST a drive to a directory on a joined drive.
+
+-2147024754, 0x8007008E, The system cannot perform a JOIN or SUBST at this time.
+
+-2147024753, 0x8007008F, The system cannot join or substitute a drive to or for a directory on the same drive.
+
+-2147024752, 0x80070090, The directory is not a subdirectory of the root directory.
+
+-2147024751, 0x80070091, The directory is not empty.
+
+-2147024750, 0x80070092, The path specified is being used in a substitute.
+
+-2147024749, 0x80070093, Not enough resources are available to process this command.
+
+-2147024748, 0x80070094, The path specified cannot be used at this time.
+
+-2147024747, 0x80070095, An attempt was made to join or substitute a drive for which a directory on the drive is the target of a previous substitute.
+
+-2147024746, 0x80070096, System trace information was not specified in your CONFIG.SYS file, or tracing is disallowed.
+
+-2147024745, 0x80070097, The number of specified semaphore events for DosMuxSemWait is not correct.
+
+-2147024744, 0x80070098, DosMuxSemWait did not execute; too many semaphores are already set.
+
+-2147024743, 0x80070099, The DosMuxSemWait list is not correct.
+
+-2147024742, 0x8007009A, The volume label you entered exceeds the label character limit of the target file system.
+
+-2147024741, 0x8007009B, Cannot create another thread.
+
+-2147024740, 0x8007009C, The recipient process has refused the signal.
+
+-2147024739, 0x8007009D, The segment is already discarded and cannot be locked.
+
+-2147024738, 0x8007009E, The segment is already unlocked.
+
+-2147024737, 0x8007009F, The address for the thread ID is not correct.
+
+-2147024736, 0x800700A0, The argument string passed to DosExecPgm is not correct.
+
+-2147024735, 0x800700A1, The specified path is invalid.
+
+-2147024734, 0x800700A2, A signal is already pending.
+
+-2147024732, 0x800700A4, No more threads can be created in the system.
+
+-2147024729, 0x800700A7, Unable to lock a region of a file.
+
+-2147024726, 0x800700AA, The requested resource is in use.
+
+-2147024723, 0x800700AD, A lock request was not outstanding for the supplied cancel region.
+
+-2147024722, 0x800700AE, The file system does not support atomic changes to the lock type.
+
+-2147024716, 0x800700B4, The system detected a segment number that was not correct.
+
+-2147024714, 0x800700B6, The operating system cannot run %1.
+
+-2147024713, 0x800700B7, Cannot create a file when that file already exists.
+
+-2147024710, 0x800700BA, The flag passed is not correct.
+
+-2147024709, 0x800700BB, The specified system semaphore name was not found.
+
+-2147024708, 0x800700BC, The operating system cannot run %1.
+
+-2147024707, 0x800700BD, The operating system cannot run %1.
+
+-2147024706, 0x800700BE, The operating system cannot run %1.
+
+-2147024705, 0x800700BF, Cannot run %1 in Windows NT mode.
+
+-2147024704, 0x800700C0, The operating system cannot run %1.
+
+-2147024703, 0x800700C1, %1 is not a valid Windows NT application.
+
+-2147024702, 0x800700C2, The operating system cannot run %1.
+
+-2147024701, 0x800700C3, The operating system cannot run %1.
+
+-2147024700, 0x800700C4, The operating system cannot run this application program.
+
+-2147024699, 0x800700C5, The operating system is not presently configured to run this application.
+
+-2147024698, 0x800700C6, The operating system cannot run %1.
+
+-2147024697, 0x800700C7, The operating system cannot run this application program.
+
+-2147024696, 0x800700C8, The code segment cannot be greater than or equal to 64KB.
+
+-2147024695, 0x800700C9, The operating system cannot run %1.
+
+-2147024694, 0x800700CA, The operating system cannot run %1.
+
+-2147024693, 0x800700CB, The system could not find the environment option that was entered.
+
+-2147024691, 0x800700CD, No process in the command subtree has a signal handler.
+
+-2147024690, 0x800700CE, The filename or extension is too long.
+
+-2147024689, 0x800700CF, The ring 2 stack is in use.
+
+-2147024688, 0x800700D0, The global filename characters, * or ?, are entered incorrectly or too many global filename characters are specified.
+
+-2147024687, 0x800700D1, The signal being posted is not correct.
+
+-2147024686, 0x800700D2, The signal handler cannot be set.
+
+-2147024684, 0x800700D4, The segment is locked and cannot be reallocated.
+
+-2147024682, 0x800700D6, Too many dynamic link modules are attached to this program or dynamic link module.
+
+-2147024681, 0x800700D7, Can't nest calls to LoadModule.
+
+-2147024680, 0x800700D8, The image file %1 is valid, but is for a machine type other than the current machine.
+
+-2147024666, 0x800700E6, The pipe state is invalid.
+
+-2147024665, 0x800700E7, All pipe instances are busy.
+
+-2147024664, 0x800700E8, The pipe is being closed.
+
+-2147024663, 0x800700E9, No process is on the other end of the pipe.
+
+-2147024662, 0x800700EA, More data is available.
+
+-2147024656, 0x800700F0, The session was cancelled.
+
+-2147024642, 0x800700FE, The specified extended attribute name was invalid.
+
+-2147024641, 0x800700FF, The extended attributes are inconsistent.
+
+-2147024637, 0x80070103, No more data is available.
+
+-2147024630, 0x8007010A, The Copy API cannot be used.
+
+-2147024629, 0x8007010B, The directory name is invalid.
+
+-2147024621, 0x80070113, The extended attributes did not fit in the buffer.
+
+-2147024620, 0x80070114, The extended attribute file on the mounted file system is corrupt.
+
+-2147024619, 0x80070115, The extended attribute table file is full.
+
+-2147024618, 0x80070116, The specified extended attribute handle is invalid.
+
+-2147024614, 0x8007011A, The mounted file system does not support extended attributes.
+
+-2147024608, 0x80070120, Attempt to release mutex not owned by caller.
+
+-2147024598, 0x8007012A, Too many posts were made to a semaphore.
+
+-2147024597, 0x8007012B, Only part of a Read/WriteProcessMemory request was completed.
+
+-2147024579, 0x8007013D, The system cannot find message for message number 0x%1 in message file for %2.
+
+-2147024409, 0x800701E7, Attempt to access invalid address.
+
+-2147024362, 0x80070216, Arithmetic result exceeded 32 bits.
+
+-2147024361, 0x80070217, There is a process on other end of the pipe.
+
+-2147024360, 0x80070218, Waiting for a process to open the other end of the pipe.
+
+-2147023902, 0x800703E2, Access to the extended attribute was denied.
+
+-2147023901, 0x800703E3, The I/O operation has been aborted because of either a thread exit or an application request.
+
+-2147023900, 0x800703E4, Overlapped I/O event is not in a signaled state.
+
+-2147023899, 0x800703E5, Overlapped I/O operation is in progress.
+
+-2147023898, 0x800703E6, Invalid access to memory location.
+
+-2147023897, 0x800703E7, Error performing inpage operation.
+
+-2147023895, 0x800703E9, Recursion too deep, stack overflowed.
+
+-2147023894, 0x800703EA, The window cannot act on the sent message.
+
+-2147023893, 0x800703EB, Cannot complete this function.
+
+-2147023892, 0x800703EC, Invalid flags.
+
+-2147023891, 0x800703ED, The volume does not contain a recognized file system. Please make sure that all required file system drivers are loaded and that the volume is not corrupt.
+
+-2147023890, 0x800703EE, The volume for a file has been externally altered such that the opened file is no longer valid.
+
+-2147023889, 0x800703EF, The requested operation cannot be performed in full-screen mode.
+
+-2147023888, 0x800703F0, An attempt was made to reference a token that does not exist.
+
+-2147023887, 0x800703F1, The configuration registry database is corrupt.
+
+-2147023886, 0x800703F2, The configuration registry key is invalid.
+
+-2147023885, 0x800703F3, The configuration registry key could not be opened.
+
+-2147023884, 0x800703F4, The configuration registry key could not be read.
+
+-2147023883, 0x800703F5, The configuration registry key could not be written.
+
+-2147023882, 0x800703F6, One of the files in the Registry database had to be recovered by use of a log or alternate copy., The recovery was successful.
+
+-2147023881, 0x800703F7, The Registry is corrupt. The structure of one of the files that contains Registry data is corrupt, or the system's image of the file in memory is corrupt, or the file could not be recovered because the alternate copy or log was absent or corrupt.
+
+-2147023880, 0x800703F8, An I/O operation initiated by the Registry failed unrecoverably. The Registry could not read in, or write out, or flush, one of the files that contain the system's image of the Registry.
+
+-2147023879, 0x800703F9, The system has attempted to load or restore a file into the Registry, but the specified file is not in a Registry file format.
+
+-2147023878, 0x800703FA, Illegal operation attempted on a Registry key which has been marked for deletion.
+
+-2147023877, 0x800703FB, System could not allocate the required space in a Registry log.
+
+-2147023876, 0x800703FC, Cannot create a symbolic link in a Registry key that already has subkeys or values.
+
+-2147023875, 0x800703FD, Cannot create a stable subkey under a volatile parent key.
+
+-2147023874, 0x800703FE, A notify change request is being completed and the information is not being returned in the caller's buffer. The caller now needs to enumerate the files to find the changes.
+
+-2147023845, 0x8007041B, A stop control has been sent to a service which other running services are dependent on.
+
+-2147023844, 0x8007041C, The requested control is not valid for this service
+
+-2147023843, 0x8007041D, The service did not respond to the start or control request in a timely fashion.
+
+-2147023842, 0x8007041E, A thread could not be created for the service.
+
+-2147023841, 0x8007041F, The service database is locked.
+
+-2147023840, 0x80070420, An instance of the service is already running.
+
+-2147023839, 0x80070421, The account name is invalid or does not exist.
+
+-2147023838, 0x80070422, The specified service is disabled and cannot be started.
+
+-2147023837, 0x80070423, Circular service dependency was specified.
+
+-2147023836, 0x80070424, The specified service does not exist as an installed service.
+
+-2147023835, 0x80070425, The service cannot accept control messages at this time.
+
+-2147023834, 0x80070426, The service has not been started.
+
+-2147023833, 0x80070427, The service process could not connect to the service controller.
+
+-2147023832, 0x80070428, An exception occurred in the service when handling the control request.
+
+-2147023831, 0x80070429, The database specified does not exist.
+
+-2147023830, 0x8007042A, The service has returned a service-specific error code.
+
+-2147023829, 0x8007042B, The process terminated unexpectedly.
+
+-2147023828, 0x8007042C, The dependency service or group failed to start.
+
+-2147023827, 0x8007042D, The service did not start due to a logon failure.
+
+-2147023826, 0x8007042E, After starting, the service hung in a start-pending state.
+
+-2147023825, 0x8007042F, The specified service database lock is invalid.
+
+-2147023824, 0x80070430, The specified service has been marked for deletion.
+
+-2147023823, 0x80070431, The specified service already exists.
+
+-2147023822, 0x80070432, The system is currently running with the last-known-good configuration.
+
+-2147023821, 0x80070433, The dependency service does not exist or has been marked for deletion.
+
+-2147023820, 0x80070434, The current boot has already been accepted for use as the last-known-good control set.
+
+-2147023819, 0x80070435, No attempts to start the service have been made since the last boot.
+
+-2147023818, 0x80070436, The name is already in use as either a service name or a service display name.
+
+-2147023817, 0x80070437, The account specified for this service is different from the account specified for other services running in the same process.
+
+-2147023796, 0x8007044C, The physical end of the tape has been reached.
+
+-2147023795, 0x8007044D, A tape access reached a filemark.
+
+-2147023794, 0x8007044E, Beginning of tape or partition was encountered.
+
+-2147023793, 0x8007044F, A tape access reached the end of a set of files.
+
+-2147023792, 0x80070450, No more data is on the tape.
+
+-2147023791, 0x80070451, Tape could not be partitioned.
+
+-2147023790, 0x80070452, When accessing a new tape of a multivolume partition, the current blocksize is incorrect.
+
+-2147023789, 0x80070453, Tape partition information could not be found when loading a tape.
+
+-2147023788, 0x80070454, Unable to lock the media eject mechanism.
+
+-2147023787, 0x80070455, Unable to unload the media.
+
+-2147023786, 0x80070456, Media in drive may have changed.
+
+-2147023785, 0x80070457, The I/O bus was reset.
+
+-2147023784, 0x80070458, No media in drive.
+
+-2147023783, 0x80070459, No mapping for the Unicode character exists in the target multi-byte code page.
+
+-2147023782, 0x8007045A, A dynamic link library (DLL) initialization routine failed.
+
+-2147023781, 0x8007045B, A system shutdown is in progress.
+
+-2147023780, 0x8007045C, Unable to abort the system shutdown because no shutdown was in progress.
+
+-2147023779, 0x8007045D, The request could not be performed because of an I/O device error.
+
+-2147023778, 0x8007045E, No serial device was successfully initialized., The serial driver will unload.
+
+-2147023777, 0x8007045F, Unable to open a device that was sharing an interrupt request (IRQ) with other devices. At least one other device that uses that IRQ was already opened.
+
+-2147023776, 0x80070460, A serial I/O operation was completed by another write to the serial port. (The IOCTL_SERIAL_XOFF_COUNTER reached zero.)
+
+-2147023775, 0x80070461, A serial I/O operation completed because the time-out period expired. (The IOCTL_SERIAL_XOFF_COUNTER did not reach zero.)
+
+-2147023774, 0x80070462, No ID address mark was found on the floppy disk.
+
+-2147023773, 0x80070463, Mismatch between the floppy disk sector ID field and the floppy disk controller track address.
+
+-2147023772, 0x80070464, The floppy disk controller reported an error that is not recognized by the floppy disk driver.
+
+-2147023771, 0x80070465, The floppy disk controller returned inconsistent results in its registers.
+
+-2147023770, 0x80070466, While accessing the hard disk, a recalibrate operation failed, even after retries.
+
+-2147023769, 0x80070467, While accessing the hard disk, a disk operation failed even after retries.
+
+-2147023768, 0x80070468, While accessing the hard disk, a disk controller reset was needed, but even that failed.
+
+-2147023767, 0x80070469, Physical end of tape encountered.
+
+-2147023766, 0x8007046A, Not enough server storage is available to process this command.
+
+-2147023765, 0x8007046B, A potential deadlock condition has been detected.
+
+-2147023764, 0x8007046C, The base address or the file offset specified does not have the proper alignment.
+
+-2147023756, 0x80070474, An attempt to change the system power state was vetoed by another application or driver.
+
+-2147023755, 0x80070475, The system BIOS failed an attempt to change the system power state.
+
+-2147023754, 0x80070476, An attempt was made to create more links on a file than the file system supports.
+
+-2147023746, 0x8007047E, The specified program requires a newer version of Windows.
+
+-2147023745, 0x8007047F, The specified program is not a Windows or MS-DOS program.
+
+-2147023744, 0x80070480, Cannot start more than one instance of the specified program.
+
+-2147023743, 0x80070481, The specified program was written for an older version of Windows.
+
+-2147023742, 0x80070482, One of the library files needed to run this application is damaged.
+
+-2147023741, 0x80070483, No application is associated with the specified file for this operation.
+
+-2147023740, 0x80070484, An error occurred in sending the command to the application.
+
+-2147023739, 0x80070485, One of the library files needed to run this application cannot be found.
+
+-2147023696, 0x800704B0, The specified device name is invalid.
+
+-2147023695, 0x800704B1, The device is not currently connected but it is a remembered connection.
+
+-2147023694, 0x800704B2, An attempt was made to remember a device that had previously been remembered.
+
+-2147023693, 0x800704B3, No network provider accepted the given network path.
+
+-2147023692, 0x800704B4, The specified network provider name is invalid.
+
+-2147023691, 0x800704B5, Unable to open the network connection profile.
+
+-2147023690, 0x800704B6, The network connection profile is corrupt.
+
+-2147023689, 0x800704B7, Cannot enumerate a non-container.
+
+-2147023688, 0x800704B8, An extended error has occurred.
+
+-2147023687, 0x800704B9, The format of the specified group name is invalid.
+
+-2147023686, 0x800704BA, The format of the specified computer name is invalid.
+
+-2147023685, 0x800704BB, The format of the specified event name is invalid.
+
+-2147023684, 0x800704BC, The format of the specified domain name is invalid.
+
+-2147023683, 0x800704BD, The format of the specified service name is invalid.
+
+-2147023682, 0x800704BE, The format of the specified network name is invalid.
+
+-2147023681, 0x800704BF, The format of the specified share name is invalid.
+
+-2147023680, 0x800704C0, The format of the specified password is invalid.
+
+-2147023679, 0x800704C1, The format of the specified message name is invalid.
+
+-2147023678, 0x800704C2, The format of the specified message destination is invalid.
+
+-2147023677, 0x800704C3, The credentials supplied conflict with an existing set of credentials.
+
+-2147023676, 0x800704C4, An attempt was made to establish a session to a network server, but there are already too many sessions established to that server.
+
+-2147023675, 0x800704C5, The workgroup or domain name is already in use by another computer on the network.
+
+-2147023674, 0x800704C6, The network is not present or not started.
+
+-2147023673, 0x800704C7, The operation was cancelled by the user.
+
+-2147023672, 0x800704C8, The requested operation cannot be performed on a file with a user mapped section open.
+
+-2147023671, 0x800704C9, The remote system refused the network connection.
+
+-2147023670, 0x800704CA, The network connection was gracefully closed.
+
+-2147023669, 0x800704CB, The network transport endpoint already has an address associated with it.
+
+-2147023668, 0x800704CC, An address has not yet been associated with the network endpoint.
+
+-2147023667, 0x800704CD, An operation was attempted on a non-existent network connection.
+
+-2147023666, 0x800704CE, An invalid operation was attempted on an active network connection.
+
+-2147023665, 0x800704CF, The remote network is not reachable by the transport.
+
+-2147023664, 0x800704D0, The remote system is not reachable by the transport.
+
+-2147023663, 0x800704D1, The remote system does not support the transport protocol.
+
+-2147023662, 0x800704D2, No service is operating at the destination network endpoint on the remote system.
+
+-2147023661, 0x800704D3, The request was aborted.
+
+-2147023660, 0x800704D4, The network connection was aborted by the local system.
+
+-2147023659, 0x800704D5, The operation could not be completed., A retry should be performed.
+
+-2147023658, 0x800704D6, A connection to the server could not be made because the limit on the number of concurrent connections for this account has been reached.
+
+-2147023657, 0x800704D7, Attempting to login during an unauthorized time of day for this account.
+
+-2147023656, 0x800704D8, The account is not authorized to login from this station.
+
+-2147023655, 0x800704D9, The network address could not be used for the operation requested.
+
+-2147023654, 0x800704DA, The service is already registered.
+
+-2147023653, 0x800704DB, The specified service does not exist.
+
+-2147023652, 0x800704DC, The operation being requested was not performed because the user has not been authenticated.
+
+-2147023651, 0x800704DD, The operation being requested was not performed because the user has not logged on to the network. The specified service does not exist.
+
+-2147023650, 0x800704DE, Return that wants caller to continue with work in progress.
+
+-2147023649, 0x800704DF, An attempt was made to perform an initialization operation when initialization has already been completed.
+
+-2147023648, 0x800704E0, No more local devices.
+
+-2147023596, 0x80070514, Not all privileges referenced are assigned to the caller.
+
+-2147023595, 0x80070515, Some mapping between account names and security IDs was not done.
+
+-2147023594, 0x80070516, No system quota limits are specifically set for this account.
+
+-2147023593, 0x80070517, No encryption key is available., A well-known encryption key was returned.
+
+-2147023592, 0x80070518, The NT password is too complex to be converted to a LAN Manager password., The LAN Manager password returned is a NULL string.
+
+-2147023591, 0x80070519, The revision level is unknown.
+
+-2147023590, 0x8007051A, Indicates two revision levels are incompatible.
+
+-2147023589, 0x8007051B, This security ID may not be assigned as the owner of this object.
+
+-2147023588, 0x8007051C, This security ID may not be assigned as the primary group of an object.
+
+-2147023587, 0x8007051D, An attempt has been made to operate on an impersonation token by a thread that is not currently impersonating a client.
+
+-2147023586, 0x8007051E, The group may not be disabled.
+
+-2147023585, 0x8007051F, There are currently no logon servers available to service the logon request.
+
+-2147023584, 0x80070520, A specified logon session does not exist., It may already have, been terminated.
+
+-2147023583, 0x80070521, A specified privilege does not exist.
+
+-2147023582, 0x80070522, A required privilege is not held by the client.
+
+-2147023581, 0x80070523, The name provided is not a properly formed account name.
+
+-2147023580, 0x80070524, The specified user already exists.
+
+-2147023579, 0x80070525, The specified user does not exist.
+
+-2147023578, 0x80070526, The specified group already exists.
+
+-2147023577, 0x80070527, The specified group does not exist.
+
+-2147023576, 0x80070528, Either the specified user account is already a member of the specified group, or the specified group cannot be deleted because it contains a member.
+
+-2147023575, 0x80070529, The specified user account is not a member of the specified group account.
+
+-2147023574, 0x8007052A, The last remaining administration account cannot be disabled or deleted.
+
+-2147023573, 0x8007052B, Unable to update the password., The value provided as the current password is incorrect.
+
+-2147023572, 0x8007052C, Unable to update the password., The value provided for the new password contains values that are not allowed in passwords.
+
+-2147023571, 0x8007052D, Unable to update the password because a password update rule has been violated.
+
+-2147023570, 0x8007052E, Logon failure: unknown user name or bad password.
+
+-2147023569, 0x8007052F, Logon failure: user account restriction.
+
+-2147023568, 0x80070530, Logon failure: account logon time restriction violation.
+
+-2147023567, 0x80070531, Logon failure: user not allowed to log on to this computer.
+
+-2147023566, 0x80070532, Logon failure: the specified account password has expired.
+
+-2147023565, 0x80070533, Logon failure: account currently disabled.
+
+-2147023564, 0x80070534, No mapping between account names and security IDs was done.
+
+-2147023563, 0x80070535, Too many local user identifiers (LUIDs) were requested at one time.
+
+-2147023562, 0x80070536, No more local user identifiers (LUIDs) are available.
+
+-2147023561, 0x80070537, The subauthority part of a security ID is invalid for this particular use.
+
+-2147023560, 0x80070538, The access control list (ACL) structure is invalid.
+
+-2147023559, 0x80070539, The security ID structure is invalid.
+
+-2147023558, 0x8007053A, The security descriptor structure is invalid.
+
+-2147023556, 0x8007053C, The inherited access control list (ACL) or access control entry (ACE) could not be built.
+
+-2147023555, 0x8007053D, The server is currently disabled.
+
+-2147023554, 0x8007053E, The server is currently enabled.
+
+-2147023553, 0x8007053F, The value provided was an invalid value for an identifier authority.
+
+-2147023552, 0x80070540, No more memory is available for security information updates.
+
+-2147023551, 0x80070541, The specified attributes are invalid, or incompatible with the attributes for the group as a whole.
+
+-2147023550, 0x80070542, Either a required impersonation level was not provided, or the provided impersonation level is invalid.
+
+-2147023549, 0x80070543, Cannot open an anonymous level security token.
+
+-2147023548, 0x80070544, The validation information class requested was invalid.
+
+-2147023547, 0x80070545, The type of the token is inappropriate for its attempted use.
+
+-2147023546, 0x80070546, Unable to perform a security operation on an object which has no associated security.
+
+-2147023545, 0x80070547, Indicates a Windows NT Server could not be contacted or that objects within the domain are protected such that necessary information could not be retrieved.
+
+-2147023544, 0x80070548, The security account manager (SAM) or local security authority (LSA) server was in the wrong state to perform the security operation.
+
+-2147023543, 0x80070549, The domain was in the wrong state to perform the security operation.
+
+-2147023542, 0x8007054A, This operation is only allowed for the Primary Domain Controller of the domain.
+
+-2147023541, 0x8007054B, The specified domain did not exist.
+
+-2147023540, 0x8007054C, The specified domain already exists.
+
+-2147023539, 0x8007054D, An attempt was made to exceed the limit on the number of domains per server.
+
+-2147023538, 0x8007054E, Unable to complete the requested operation because of either a catastrophic media failure or a data structure corruption on the disk.
+
+-2147023537, 0x8007054F, The security account database contains an internal inconsistency.
+
+-2147023536, 0x80070550, Generic access types were contained in an access mask which should already be mapped to non-generic types.
+
+-2147023535, 0x80070551, A security descriptor is not in the right format (absolute or self-relative).
+
+-2147023534, 0x80070552, The requested action is restricted for use by logon processes only., The calling process has not registered as a logon process.
+
+-2147023533, 0x80070553, Cannot start a new logon session with an ID that is already in use.
+
+-2147023532, 0x80070554, A specified authentication package is unknown.
+
+-2147023531, 0x80070555, The logon session is not in a state that is consistent with the requested operation.
+
+-2147023530, 0x80070556, The logon session ID is already in use.
+
+-2147023529, 0x80070557, A logon request contained an invalid logon type value.
+
+-2147023528, 0x80070558, Unable to impersonate via a named pipe until data has been read from that pipe.
+
+-2147023527, 0x80070559, The transaction state of a Registry subtree is incompatible with the requested operation.
+
+-2147023526, 0x8007055A, An internal security database corruption has been encountered.
+
+-2147023525, 0x8007055B, Cannot perform this operation on built-in accounts.
+
+-2147023524, 0x8007055C, Cannot perform this operation on this built-in special group.
+
+-2147023523, 0x8007055D, Cannot perform this operation on this built-in special user.
+
+-2147023522, 0x8007055E, The user cannot be removed from a group because the group is currently the user's primary group.
+
+-2147023521, 0x8007055F, The token is already in use as a primary token.
+
+-2147023520, 0x80070560, The specified local group does not exist.
+
+-2147023519, 0x80070561, The specified account name is not a member of the local group.
+
+-2147023518, 0x80070562, The specified account name is already a member of the local group.
+
+-2147023517, 0x80070563, The specified local group already exists.
+
+-2147023516, 0x80070564, Logon failure: the user has not been granted the requested logon type at this computer.
+
+-2147023515, 0x80070565, The maximum number of secrets that may be stored in a single system has been exceeded.
+
+-2147023514, 0x80070566, The length of a secret exceeds the maximum length allowed.
+
+-2147023513, 0x80070567, The local security authority database contains an internal inconsistency.
+
+-2147023512, 0x80070568, During a logon attempt, the user's security context accumulated too many security IDs.
+
+-2147023511, 0x80070569, Logon failure: the user has not been granted the requested logon type at this computer.
+
+-2147023510, 0x8007056A, A cross-encrypted password is necessary to change a user password.
+
+-2147023509, 0x8007056B, A new member could not be added to a local group because the member does not exist.
+
+-2147023508, 0x8007056C, A new member could not be added to a local group because the member has the wrong account type.
+
+-2147023507, 0x8007056D, Too many security IDs have been specified.
+
+-2147023506, 0x8007056E, A cross-encrypted password is necessary to change this user password.
+
+-2147023505, 0x8007056F, Indicates an ACL contains no inheritable components
+
+-2147023504, 0x80070570, The file or directory is corrupt and non-readable.
+
+-2147023503, 0x80070571, The disk structure is corrupt and non-readable.
+
+-2147023502, 0x80070572, There is no user session key for the specified logon session.
+
+-2147023501, 0x80070573, The service being accessed is licensed for a particular number of connections. No more connections can be made to the service at this time because there are already as many connections as the service can accept.
+
+-2147023496, 0x80070578, Invalid window handle.
+
+-2147023495, 0x80070579, Invalid menu handle.
+
+-2147023494, 0x8007057A, Invalid cursor handle.
+
+-2147023493, 0x8007057B, Invalid accelerator table handle.
+
+-2147023492, 0x8007057C, Invalid hook handle.
+
+-2147023491, 0x8007057D, Invalid handle to a multiple-window position structure.
+
+-2147023490, 0x8007057E, Cannot create a top-level child window.
+
+-2147023489, 0x8007057F, Cannot find window class.
+
+-2147023488, 0x80070580, Invalid window, belongs to other thread.
+
+-2147023487, 0x80070581, Hot key is already registered.
+
+-2147023486, 0x80070582, Class already exists.
+
+-2147023485, 0x80070583, Class does not exist.
+
+-2147023484, 0x80070584, Class still has open windows.
+
+-2147023483, 0x80070585, Invalid index.
+
+-2147023482, 0x80070586, Invalid icon handle.
+
+-2147023481, 0x80070587, Using private DIALOG window words.
+
+-2147023480, 0x80070588, The listbox identifier was not found.
+
+-2147023479, 0x80070589, No wildcards were found.
+
+-2147023478, 0x8007058A, Thread does not have a clipboard open.
+
+-2147023477, 0x8007058B, Hot key is not registered.
+
+-2147023476, 0x8007058C, The window is not a valid dialog window.
+
+-2147023475, 0x8007058D, Control ID not found.
+
+-2147023474, 0x8007058E, Invalid message for a combo box because it does not have an edit control.
+
+-2147023473, 0x8007058F, The window is not a combo box.
+
+-2147023472, 0x80070590, Height must be less than 256.
+
+-2147023471, 0x80070591, Invalid device context (DC) handle.
+
+-2147023470, 0x80070592, Invalid hook procedure type.
+
+-2147023469, 0x80070593, Invalid hook procedure.
+
+-2147023468, 0x80070594, Cannot set non-local hook without a module handle.
+
+-2147023467, 0x80070595, This hook procedure can only be set globally.
+
+-2147023466, 0x80070596, The journal hook procedure is already installed.
+
+-2147023465, 0x80070597, The hook procedure is not installed.
+
+-2147023464, 0x80070598, Invalid message for single-selection listbox.
+
+-2147023463, 0x80070599, LB_SETCOUNT sent to non-lazy listbox.
+
+-2147023462, 0x8007059A, This list box does not support tab stops.
+
+-2147023461, 0x8007059B, Cannot destroy object created by another thread.
+
+-2147023460, 0x8007059C, Child windows cannot have menus.
+
+-2147023459, 0x8007059D, The window does not have a system menu.
+
+-2147023458, 0x8007059E, Invalid message box style.
+
+-2147023457, 0x8007059F, Invalid system-wide (SPI_*) parameter.
+
+-2147023456, 0x800705A0, Screen already locked.
+
+-2147023455, 0x800705A1, All handles to windows in a multiple-window position structure must have the same parent.
+
+-2147023454, 0x800705A2, The window is not a child window.
+
+-2147023453, 0x800705A3, Invalid GW_* command.
+
+-2147023452, 0x800705A4, Invalid thread identifier.
+
+-2147023451, 0x800705A5, Cannot process a message from a window that is not a multiple document interface (MDI) window.
+
+-2147023450, 0x800705A6, Popup menu already active.
+
+-2147023449, 0x800705A7, The window does not have scroll bars.
+
+-2147023448, 0x800705A8, Scroll bar range cannot be greater than 0x7FFF.
+
+-2147023447, 0x800705A9, Cannot show or remove the window in the way specified.
+
+-2147023446, 0x800705AA, Insufficient system resources exist to complete the requested service.
+
+-2147023445, 0x800705AB, Insufficient system resources exist to complete the requested service.
+
+-2147023444, 0x800705AC, Insufficient system resources exist to complete the requested service.
+
+-2147023443, 0x800705AD, Insufficient quota to complete the requested service.
+
+-2147023442, 0x800705AE, Insufficient quota to complete the requested service.
+
+-2147023441, 0x800705AF, The paging file is too small for this operation to complete.
+
+-2147023440, 0x800705B0, A menu item was not found.
+
+-2147023439, 0x800705B1, Invalid keyboard layout handle.
+
+-2147023438, 0x800705B2, Hook type not allowed.
+
+-2147023437, 0x800705B3, This operation requires an interactive window station.
+
+-2147023436, 0x800705B4, This operation returned because the timeout period expired.
+
+-2147023435, 0x800705B5, Invalid monitor handle.
+
+-2147023396, 0x800705DC, The event log file is corrupt.
+
+-2147023395, 0x800705DD, No event log file could be opened, so the event logging service did not start.
+
+-2147023394, 0x800705DE, The event log file is full.
+
+-2147023393, 0x800705DF, The event log file has changed between reads.
+
+-2147023196, 0x800706A4, The string binding is invalid.
+
+-2147023195, 0x800706A5, The binding handle is not the correct type.
+
+-2147023194, 0x800706A6, The binding handle is invalid.
+
+-2147023193, 0x800706A7, The RPC protocol sequence is not supported.
+
+-2147023192, 0x800706A8, The RPC protocol sequence is invalid.
+
+-2147023191, 0x800706A9, The string universal unique identifier (UUID) is invalid.
+
+-2147023190, 0x800706AA, The endpoint format is invalid.
+
+-2147023189, 0x800706AB, The network address is invalid.
+
+-2147023188, 0x800706AC, No endpoint was found.
+
+-2147023187, 0x800706AD, The timeout value is invalid.
+
+-2147023186, 0x800706AE, The object universal unique identifier (UUID) was not found.
+
+-2147023185, 0x800706AF, The object universal unique identifier (UUID) has already been registered.
+
+-2147023184, 0x800706B0, The type universal unique identifier (UUID) has already been registered.
+
+-2147023183, 0x800706B1, The RPC server is already listening.
+
+-2147023182, 0x800706B2, No protocol sequences have been registered.
+
+-2147023181, 0x800706B3, The RPC server is not listening.
+
+-2147023180, 0x800706B4, The manager type is unknown.
+
+-2147023179, 0x800706B5, The interface is unknown.
+
+-2147023178, 0x800706B6, There are no bindings.
+
+-2147023177, 0x800706B7, There are no protocol sequences.
+
+-2147023176, 0x800706B8, The endpoint cannot be created.
+
+-2147023175, 0x800706B9, Not enough resources are available to complete this operation.
+
+-2147023174, 0x800706BA, The RPC server is unavailable.
+
+-2147023173, 0x800706BB, The RPC server is too busy to complete this operation.
+
+-2147023172, 0x800706BC, The network options are invalid.
+
+-2147023171, 0x800706BD, There is not a remote procedure call active in this thread.
+
+-2147023170, 0x800706BE, The remote procedure call failed.
+
+-2147023169, 0x800706BF, The remote procedure call failed and did not execute.
+
+-2147023168, 0x800706C0, A remote procedure call (RPC) protocol error occurred.
+
+-2147023166, 0x800706C2, The transfer syntax is not supported by the RPC server.
+
+-2147023164, 0x800706C4, The universal unique identifier (UUID) type is not supported.
+
+-2147023163, 0x800706C5, The tag is invalid.
+
+-2147023162, 0x800706C6, The array bounds are invalid.
+
+-2147023161, 0x800706C7, The binding does not contain an entry name.
+
+-2147023160, 0x800706C8, The name syntax is invalid.
+
+-2147023159, 0x800706C9, The name syntax is not supported.
+
+-2147023157, 0x800706CB, No network address is available to use to construct a universal unique identifier (UUID).
+
+-2147023156, 0x800706CC, The endpoint is a duplicate.
+
+-2147023155, 0x800706CD, The authentication type is unknown.
+
+-2147023154, 0x800706CE, The maximum number of calls is too small.
+
+-2147023153, 0x800706CF, The string is too long.
+
+-2147023152, 0x800706D0, The RPC protocol sequence was not found.
+
+-2147023151, 0x800706D1, The procedure number is out of range.
+
+-2147023150, 0x800706D2, The binding does not contain any authentication information.
+
+-2147023149, 0x800706D3, The authentication service is unknown.
+
+-2147023148, 0x800706D4, The authentication level is unknown.
+
+-2147023147, 0x800706D5, The security context is invalid.
+
+-2147023146, 0x800706D6, The authorization service is unknown.
+
+-2147023145, 0x800706D7, The entry is invalid.
+
+-2147023144, 0x800706D8, The server endpoint cannot perform the operation.
+
+-2147023143, 0x800706D9, There are no more endpoints available from the endpoint mapper.
+
+-2147023142, 0x800706DA, No interfaces have been exported.
+
+-2147023141, 0x800706DB, The entry name is incomplete.
+
+-2147023140, 0x800706DC, The version option is invalid.
+
+-2147023139, 0x800706DD, There are no more members.
+
+-2147023138, 0x800706DE, There is nothing to unexport.
+
+-2147023137, 0x800706DF, The interface was not found.
+
+-2147023136, 0x800706E0, The entry already exists.
+
+-2147023135, 0x800706E1, The entry is not found.
+
+-2147023134, 0x800706E2, The name service is unavailable.
+
+-2147023133, 0x800706E3, The network address family is invalid.
+
+-2147023132, 0x800706E4, The requested operation is not supported.
+
+-2147023131, 0x800706E5, No security context is available to allow impersonation.
+
+-2147023130, 0x800706E6, An internal error occurred in a remote procedure call (RPC).
+
+-2147023129, 0x800706E7, The RPC server attempted an integer division by zero.
+
+-2147023128, 0x800706E8, An addressing error occurred in the RPC server.
+
+-2147023127, 0x800706E9, A floating-point operation at the RPC server caused a division by zero.
+
+-2147023126, 0x800706EA, A floating-point underflow occurred at the RPC server.
+
+-2147023125, 0x800706EB, A floating-point overflow occurred at the RPC server.
+
+-2147023124, 0x800706EC, The list of RPC servers available for the binding of auto handles has been exhausted.
+
+-2147023123, 0x800706ED, Unable to open the character translation table file.
+
+-2147023122, 0x800706EE, The file containing the character translation table has fewer than 512 bytes.
+
+-2147023121, 0x800706EF, A null context handle was passed from the client to the host during a remote procedure call.
+
+-2147023119, 0x800706F1, The context handle changed during a remote procedure call.
+
+-2147023118, 0x800706F2, The binding handles passed to a remote procedure call do not match.
+
+-2147023117, 0x800706F3, The stub is unable to get the remote procedure call handle.
+
+-2147023116, 0x800706F4, A null reference pointer was passed to the stub.
+
+-2147023115, 0x800706F5, The enumeration value is out of range.
+
+-2147023114, 0x800706F6, The byte count is too small.
+
+-2147023113, 0x800706F7, The stub received bad data.
+
+-2147023112, 0x800706F8, The supplied user buffer is not valid for the requested operation.
+
+-2147023111, 0x800706F9, The disk media is not recognized., It may not be formatted.
+
+-2147023110, 0x800706FA, The workstation does not have a trust secret.
+
+-2147023109, 0x800706FB, The SAM database on the Windows NT Server does not have a computer account for this workstation trust relationship.
+
+-2147023108, 0x800706FC, The trust relationship between the primary domain and the trusted domain failed.
+
+-2147023107, 0x800706FD, The trust relationship between this workstation and the primary domain failed.
+
+-2147023106, 0x800706FE, The network logon failed.
+
+-2147023105, 0x800706FF, A remote procedure call is already in progress for this thread.
+
+-2147023104, 0x80070700, An attempt was made to logon, but the network logon service was not started.
+
+-2147023103, 0x80070701, The user's account has expired.
+
+-2147023102, 0x80070702, The redirector is in use and cannot be unloaded.
+
+-2147023101, 0x80070703, The specified printer driver is already installed.
+
+-2147023100, 0x80070704, The specified port is unknown.
+
+-2147023099, 0x80070705, The printer driver is unknown.
+
+-2147023098, 0x80070706, The print processor is unknown.
+
+-2147023097, 0x80070707, The specified separator file is invalid.
+
+-2147023096, 0x80070708, The specified priority is invalid.
+
+-2147023095, 0x80070709, The printer name is invalid.
+
+-2147023094, 0x8007070A, The printer already exists.
+
+-2147023093, 0x8007070B, The printer command is invalid.
+
+-2147023092, 0x8007070C, The specified data type is invalid.
+
+-2147023091, 0x8007070D, The Environment specified is invalid.
+
+-2147023090, 0x8007070E, There are no more bindings.
+
+-2147023089, 0x8007070F, The account used is an interdomain trust account., Use your global user account or local user account to access this server.
+
+-2147023088, 0x80070710, The account used is a Computer Account., Use your global user account or local user account to access this server.
+
+-2147023087, 0x80070711, The account used is an server trust account., Use your global user account or local user account to access this server.
+
+-2147023086, 0x80070712, The name or security ID (SID) of the domain specified is inconsistent with the trust information for that domain.
+
+-2147023085, 0x80070713, The server is in use and cannot be unloaded.
+
+-2147023084, 0x80070714, The specified image file did not contain a resource section.
+
+-2147023083, 0x80070715, The specified resource type can not be found in the image file.
+
+-2147023082, 0x80070716, The specified resource name can not be found in the image file.
+
+-2147023081, 0x80070717, The specified resource language ID cannot be found in the image file.
+
+-2147023080, 0x80070718, Not enough quota is available to process this command.
+
+-2147023079, 0x80070719, No interfaces have been registered.
+
+-2147023078, 0x8007071A, The server was altered while processing this call.
+
+-2147023077, 0x8007071B, The binding handle does not contain all required information.
+
+-2147023076, 0x8007071C, Communications failure.
+
+-2147023075, 0x8007071D, The requested authentication level is not supported.
+
+-2147023074, 0x8007071E, No principal name registered.
+
+-2147023073, 0x8007071F, The error specified is not a valid Windows NT RPC error code.
+
+-2147023072, 0x80070720, A UUID that is valid only on this computer has been allocated.
+
+-2147023071, 0x80070721, A security package specific error occurred.
+
+-2147023070, 0x80070722, Thread is not cancelled.
+
+-2147023069, 0x80070723, Invalid operation on the encoding/decoding handle.
+
+-2147023068, 0x80070724, Incompatible version of the serializing package.
+
+-2147023067, 0x80070725, Incompatible version of the RPC stub.
+
+-2147023066, 0x80070726, The idl pipe object is invalid or corrupted.
+
+-2147023065, 0x80070727, The operation is invalid for a given idl pipe object.
+
+-2147023064, 0x80070728, The idl pipe version is not supported.
+
+-2147022998, 0x8007076A, The group member was not found.
+
+-2147022997, 0x8007076B, The endpoint mapper database could not be created.
+
+-2147022996, 0x8007076C, The object universal unique identifier (UUID) is the nil UUID.
+
+-2147022995, 0x8007076D, The specified time is invalid.
+
+-2147022994, 0x8007076E, The specified Form name is invalid.
+
+-2147022993, 0x8007076F, The specified Form size is invalid
+
+-2147022992, 0x80070770, The specified Printer handle is already being waited on
+
+-2147022991, 0x80070771, The specified Printer has been deleted
+
+-2147022990, 0x80070772, The state of the Printer is invalid
+
+-2147022989, 0x80070773, The user must change his password before he logs on the first time.
+
+-2147022988, 0x80070774, Could not find the domain controller for this domain.
+
+-2147022987, 0x80070775, The referenced account is currently locked out and may not be logged on to.
+
+-2147022986, 0x80070776, The object exporter specified was not found.
+
+-2147022985, 0x80070777, The object specified was not found.
+
+-2147022984, 0x80070778, The object resolver set specified was not found.
+
+-2147022983, 0x80070779, Some data remains to be sent in the request buffer.
+
+-2147022896, 0x800707D0, The pixel format is invalid.
+
+-2147022895, 0x800707D1, The specified driver is invalid.
+
+-2147022894, 0x800707D2, The window style or class attribute is invalid for this operation.
+
+-2147022893, 0x800707D3, The requested metafile operation is not supported.
+
+-2147022892, 0x800707D4, The requested transformation operation is not supported.
+
+-2147022891, 0x800707D5, The requested clipping operation is not supported.
+
+-2147022788, 0x8007083C, The network connection was made successfully but the user had to be prompted for a password other than the one originally specified.
+
+-2147022694, 0x8007089A, The specified username is invalid.
+
+-2147022646, 0x800708CA, This network connection does not exist.
+
+-2147022495, 0x80070961, This network connection has files open or requests pending.
+
+-2147022494, 0x80070962, Active connections still exist.
+
+-2147022492, 0x80070964, The device is in use by an active process and cannot be disconnected.
+
+-2147021896, 0x80070BB8, The specified print monitor is unknown.
+
+-2147021895, 0x80070BB9, The specified printer driver is currently in use.
+
+-2147021894, 0x80070BBA, The spool file was not found.
+
+-2147021893, 0x80070BBB, A StartDocPrinter call was not issued.
+
+-2147021892, 0x80070BBC, An AddJob call was not issued.
+
+-2147021891, 0x80070BBD, The specified print processor has already been installed.
+
+-2147021890, 0x80070BBE, The specified print monitor has already been installed.
+
+-2147021889, 0x80070BBF, The specified print monitor does not have the required functions.
+
+-2147021888, 0x80070BC0, The specified print monitor is currently in use.
+
+-2147021887, 0x80070BC1, The requested operation is not allowed when there are jobs queued to the printer.
+
+-2147021886, 0x80070BC2, The requested operation is successful., Changes will not be effective until the system is rebooted.
+
+-2147021885, 0x80070BC3, The requested operation is successful., Changes will not be effective until the service is restarted.
+
+-2147020896, 0x80070FA0, WINS encountered an error while processing the command.
+
+-2147020895, 0x80070FA1, The local WINS can not be deleted.
+
+-2147020894, 0x80070FA2, The importation from the file failed.
+
+-2147020893, 0x80070FA3, The backup Failed., Was a full backup done before ?
+
+-2147020892, 0x80070FA4, The backup Failed., Check the directory that you are backing the database to.
+
+-2147020891, 0x80070FA5, The name does not exist in the WINS database.
+
+-2147020890, 0x80070FA6, Replication with a non-configured partner is not allowed.
+
+-2147020796, 0x80071004, The DHCP client has obtained an IP address that is already in use on the network., The local interface will be disabled until the DHCP client can obtain a new address.
+
+-2147019895, 0x80071389, The cluster resource cannot be moved to another group because other resources are dependent on it.
+
+-2147019894, 0x8007138A, The cluster resource dependency cannot be found.
+
+-2147019893, 0x8007138B, The cluster resource cannot be made dependent on the specified resource because it is already dependent.
+
+-2147019892, 0x8007138C, The cluster resource is not online.
+
+-2147019891, 0x8007138D, A cluster node is not available for this operation.
+
+-2147019890, 0x8007138E, The cluster resource is not available.
+
+-2147019889, 0x8007138F, The cluster resource could not be found.
+
+-2147019888, 0x80071390, The cluster is being shut down.
+
+-2147019887, 0x80071391, A cluster node cannot be evicted from the cluster while it is online.
+
+-2147019886, 0x80071392, The object already exists.
+
+-2147019885, 0x80071393, The object is already in the list.
+
+-2147019884, 0x80071394, The cluster group is not available for any new requests.
+
+-2147019883, 0x80071395, The cluster group could not be found.
+
+-2147019882, 0x80071396, The operation could not be completed because the cluster group is not online.
+
+-2147019881, 0x80071397, The cluster node is not the owner of the resource.
+
+-2147019880, 0x80071398, The cluster node is not the owner of the group.
+
+-2147019879, 0x80071399, The cluster resource could not be created in the specified resource monitor.
+
+-2147019878, 0x8007139A, The cluster resource could not be brought online by the resource monitor.
+
+-2147019877, 0x8007139B, The operation could not be completed because the cluster resource is online.
+
+-2147019876, 0x8007139C, The cluster resource could not be deleted or brought offline because it is the quorum resource.
+
+-2147019875, 0x8007139D, The cluster could not make the specified resource a quorum resource because it is not capable of being a quorum resource.
+
+-2147019874, 0x8007139E, The cluster software is shutting down.
+
+-2147019873, 0x8007139F, The group or resource is not in the correct state to perform the requested operation.
+
+-2147019872, 0x800713A0, The properties were stored but not all changes will take effect until the next time the resource is brought online.
+
+-2147019871, 0x800713A1, The cluster could not make the specified resource a quorum resource because it does not belong to a shared storage class.
+
+-2147019870, 0x800713A2, The cluster resource could not be deleted since it is a core resource.
+
+-2147019869, 0x800713A3, The quorum resource failed to come online.
+
+-2147019868, 0x800713A4, The quorum log could not be created or mounted successfully.
+
+-2147019867, 0x800713A5, The cluster log is corrupt.
+
+-2147019866, 0x800713A6, The record could not be written to the cluster log since it exceeds the maximum size.
+
+-2147019865, 0x800713A7, The cluster log exceeds its maximum size.
+
+-2147019864, 0x800713A8, No checkpoint record was found in the cluster log.
+
+-2147019863, 0x800713A9, The minimum required disk space needed for logging is not available.
+
+-2147018778, 0x800717E6, The list of servers for this workgroup is not currently available
+
+-2146959359, 0x80080001, Attempt to create a class object failed
+
+-2146959358, 0x80080002, OLE service could not bind object
+
+-2146959357, 0x80080003, RPC communication failed with OLE service
+
+-2146959356, 0x80080004, Bad path to object
+
+-2146959355, 0x80080005, Server execution failed
+
+-2146959354, 0x80080006, OLE service could not communicate with the object server
+
+-2146959353, 0x80080007, Moniker path could not be normalized
+
+-2146959352, 0x80080008, Object server is stopping when OLE service contacts it
+
+-2146959351, 0x80080009, An invalid root block pointer was specified
+
+-2146959344, 0x80080010, An allocation chain contained an invalid link pointer
+
+-2146959343, 0x80080011, The requested allocation size was too large
+
+
+-2146893823, 0x80090001, Bad UID.
+
+-2146893822, 0x80090002, Bad Hash.
+
+-2146893821, 0x80090003, Bad Key.
+
+-2146893820, 0x80090004, Bad Length.
+
+-2146893819, 0x80090005, Bad Data.
+
+-2146893818, 0x80090006, Invalid Signature.
+
+-2146893817, 0x80090007, Bad Version of provider.
+
+-2146893816, 0x80090008, Invalid algorithm specified.
+
+-2146893815, 0x80090009, Invalid flags specified.
+
+-2146893814, 0x8009000A, Invalid type specified.
+
+-2146893813, 0x8009000B, Key not valid for use in specified state.
+
+-2146893812, 0x8009000C, Hash not valid for use in specified state.
+
+-2146893811, 0x8009000D, Key does not exist.
+
+-2146893810, 0x8009000E, Insufficient memory available for the operation.
+
+-2146893809, 0x8009000F, Object already exists.
+
+-2146893808, 0x80090010, Access denied.
+
+-2146893807, 0x80090011, Object was not found.
+
+-2146893806, 0x80090012, Data already encrypted.
+
+-2146893805, 0x80090013, Invalid provider specified.
+
+-2146893804, 0x80090014, Invalid provider type specified.
+
+-2146893803, 0x80090015, Provider's public key is invalid.
+
+-2146893802, 0x80090016, Keyset does not exist
+
+-2146893801, 0x80090017, Provider type not defined.
+
+-2146893800, 0x80090018, Provider type as registered is invalid.
+
+-2146893799, 0x80090019, The keyset is not defined.
+
+-2146893798, 0x8009001A, Keyset as registered is invalid.
+
+-2146893797, 0x8009001B, Provider type does not match registered value.
+
+-2146893796, 0x8009001C, The digital signature file is corrupt.
+
+-2146893795, 0x8009001D, Provider DLL failed to initialize correctly.
+
+-2146893794, 0x8009001E, Provider DLL could not be found.
+
+-2146893793, 0x8009001F, The Keyset parameter is invalid.
+
+-2146893792, 0x80090020, An internal error occurred.
+
+-2146893791, 0x80090021, A base error occurred.
+
+-2146889727, 0x80091001, An error was encountered doing a cryptographic message operation.
+
+-2146889726, 0x80091002, The cryptographic algorithm is unknown.
+
+-2146889725, 0x80091003, The object identifier is badly formatted.
+
+-2146889724, 0x80091004, The message type is invalid.
+
+-2146889723, 0x80091005, The message is not encoded as expected.
+
+-2146889722, 0x80091006, The message does not contain an expected authenticated attribute.
+
+-2146889721, 0x80091007, The hash value is not correct.
+
+-2146889720, 0x80091008, The index value is not valid.
+
+-2146889719, 0x80091009, The message content has already been decrypted.
+
+-2146889718, 0x8009100A, The message content has not been decrypted yet.
+
+-2146889717, 0x8009100B, The enveloped-data message does not contain the specified recipient.
+
+-2146889716, 0x8009100C, The control type is not valid.
+
+-2146889715, 0x8009100D, The issuer and/or serial number are/is not valid.
+
+-2146889714, 0x8009100E, The original signer is not found.
+
+-2146889713, 0x8009100F, The message does not contain the requested attributes.
+
+-2146885631, 0x80092001, The length specified for the output data was insufficient.
+
+-2146885630, 0x80092002, An error was encountered while encoding or decoding.
+
+-2146885629, 0x80092003, An error occurred while reading or writing to the file
+
+-2146885628, 0x80092004, The object or property wasn't found
+
+-2146885627, 0x80092005, The object or property already exists
+
+-2146885626, 0x80092006, No provider was specified for the store or object
+
+-2146885625, 0x80092007, The specified certificate is self signed.
+
+-2146885624, 0x80092008, The previous certificate or CRL context was deleted.
+
+-2146885623, 0x80092009, No match when trying to find the object.
+
+-2146885622, 0x8009200A, The type of the cryptographic message being decoded is different than what was expected.
+
+-2146885621, 0x8009200B, The certificate doesn't have a private key property
+
+-2146885620, 0x8009200C, No certificate was found having a private key property to use for decrypting.
+
+-2146885619, 0x8009200D, Either, not a cryptographic message or incorrectly formatted.
+
+-2146885618, 0x8009200E, The signed message doesn't have a signer for the specified signer index
+
+-2146885617, 0x8009200F, Final closure is pending until additional frees or closes.
+
+-2146885616, 0x80092010, The certificate or signature has been revoked
+
+-2146885615, 0x80092011, No .dll or exported function was found to verify revocation.
+
+-2146885614, 0x80092012, The called function wasn't able to do a revocation check on the certificate or signature.
+
+-2146885613, 0x80092013, Since the revocation server was offline, the called function wasn't able to complete the revocation check.
+
+-2146885600, 0x80092020, The string contains a non-numeric character.
+
+-2146885599, 0x80092021, The string contains a non-printable character.
+
+-2146885598, 0x80092022, The string contains a character not in the 7 bit ASCII character set.
+
+-2146881536, 0x80093000, OSS Certificate encode/decode error code base., See asn1code.h for a definition of the OSS runtime errors. The OSS error values are offset by CRYPT_E_OSS_ERROR.
+
+ActiveX Data Objects (ADO) Runtime errors
+-2146824581, 0x800A0E7B, Cannot change the ActiveConnection property of a Recordset object which has a Command object as its source.
+
+-2146824556, 0x800A0E94, Server cannot complete the operation.
+
+-2146824540, 0x800A0EA4, Connection was denied. New connection you requested has different characteristics than the one already in use.
+
+-2146825068, 0X800A0C94, Supplied provider is different from the one already in use.
+
+-2146824564, 0x800A0E8C, Data value cannot be converted for reasons other than sign mismatch or data overflow. For example, conversion would have truncated data.
+
+-2146824563, 0x800A0E8D, Data value cannot be set or retrieved because the field data type was unknown, or the provider had insufficient resources to perform the operation.
+
+-2146824541, 0x800A0EA3, Operation requires a valid ParentCatalog.
+
+-2146824562, 0x800A0E8E, Record does not contain this field.
+
+-2146824867, 0x800A0D5D, Application uses a value of the wrong type for the current operation.
+
+-2146824567, 0x800A0E89, Data value is too large to be represented by the field data type.
+
+-2146824550, 0x800A0E9A, URL of the object to be deleted is outside the scope of the current record.
+
+-2146824538, 0x800A0EA6, Provider does not support sharing restrictions.
+
+-2146824537, 0x800A0EA7, Provider does not support the requested kind of sharing restriction.
+
+-2146825037, 0x800A0CB3, Object or provider is not capable of performing requested operation.
+
+-2146824539, 0x800A0EA5, Fields update failed. For further information, examine the Status property of individual field objects.
+
+-2146825069, 0x800A0C93, Operation is not allowed in this context.
+
+-2146824569, 0x800A0E87, Data value conflicts with the integrity constraints of the field.
+
+-2146825042, 0x800A0CAE, Connection object cannot be explicitly closed while in a transaction.
+
+-2146825287, 0x800A0BB9, Arguments are of the wrong type, are out of acceptable range, or are in conflict with one another.
+
+-2146824579, 0x800A0E7D, The connection cannot be used to perform this operation. It is either closed or invalid in this context.
+
+-2146824580, 0x800A0E7C, Parameter object is improperly defined. Inconsistent or incomplete information was provided.
+
+-2146824574, 0x800A0E82, Coordinating transaction is invalid or has not started.
+
+-2146824559, 0x800A0E91, URL contains invalid characters. Make sure the URL is typed correctly.
+
+-2146825023, 0x800A0CC1, Item cannot be found in the collection corresponding to the requested name or ordinal.
+
+-2146825267, 0x800A0BCD, Either BOF or EOF is True, or the current record has been deleted. Requested operation requires a current record.
+
+-2146824573, 0x800A0E83, Operation cannot be performed while not executing.
+
+-2146824578, 0x800A0E7E, Operation cannot be performed while processing event.
+
+-2146824584, 0x800A0E78, Operation is not allowed when the object is closed.
+
+-2146824921, 0x800A0D27, Object is already in collection. Cannot append.
+
+-2146824868, 0x800A0D5C, Object is no longer valid.
+
+-2146824583, 0x800A0E79, Operation is not allowed when the object is open.
+
+-2146825286, 0x800A0BBA, File could not be opened.
+
+-2146824576, 0x800A0E80, Operation has been cancelled by the user.
+
+-2146824554, 0x800A0E96, Operation cannot be performed. Provider cannot obtain enough storage space.
+
+-2146824568, 0x800A0E88, Insufficient permission prevents writing to the field.
+
+-2146825288, 0x800A0BB8, Provider failed to perform the requested operation.
+
+-2146824582, 0x800A0E7A, Provider cannot be found. It may not be properly installed.
+
+-2146825285, 0x800A0BBB, File could not be read.
+
+-2146824557, 0x800A0E93, Copy operation cannot be performed. Object named by destination URL already exists. Specify adCopyOverwrite to replace the object.
+
+-2146824558, 0x800A0E92, Object represented by the specified URL is locked by one or more other processes. Wait until the process has finished and attempt the operation again.
+
+-2146824553, 0x800A0E97, Source or destination URL is outside the scope of the current record.
+
+-2146824566, 0x800A0E8A, Data value conflicts with the data type or constraints of the field.
+
+-2146824565, 0x800A0E8B, Conversion failed because the data value was signed and the field data type used by the provider was unsigned.
+
+-2146824575, 0x800A0E81, Operation cannot be performed while connecting asynchronously.
+
+-2146824577, 0x800A0E7F, Operation cannot be performed while executing asynchronously.
+
+-2146824560, 0x800A0E90, Permissions are insufficient to access tree or subtree.
+
+-2146824552, 0x800A0E98, Operation failed to complete and the status is unavailable. The field may be unavailable or the operation was not attempted.
+
+-2146824572, 0x800A0E84, Safety settings on this computer prohibit accessing a data source on another domain.
+
+-2146824561, 0x800A0E8F, Either the source URL or the parent of the destination URL does not exist.
+
+-2146824551, 0x800A0E99, Record named by this URL does not exist.
+
+-2146824555, 0x800A0E95, Provider cannot locate the storage device indicated by the URL. Make sure the URL is typed correctly.
+
+-2146825284, 0x800A0BBC, Write to file failed.
+
+-2146824571, 0x800A0E85, For internal use only. Don't use.
+
+-2146824570, 0x800A0E86, For internal use only. Don't use.
+
