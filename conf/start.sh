@@ -48,10 +48,10 @@ alien -kci cprocsp-pki-2.0.0-amd64-cades.rpm && \
 php5.6 getRootAndCACerts.php && \
 
 # Установка коневых сертификатов
-find ./root_certs/ -name "*.cer" -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; && \
+find ./root_certs/ -name "*.cer" -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; > root.log && \
 
 # Установка УЦ сертификатов
-find ./ca_certs/ -name "*.cer" -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; && \
+find ./ca_certs/ -name "*.cer" -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \; > ca.log && \
 
 # Запуск php-web сервер для ответов по API
 sh -c "nohup php -S 0.0.0.0:80 -t /www &" && \

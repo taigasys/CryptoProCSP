@@ -11,14 +11,16 @@ if (!isset($output_array[1])){
     echo 'Ссылки на сертификаты не найдены' , "\n";
     die();
 }
-
+$count = 0;
 foreach ($output_array[1] as $link){
     copy(
         'http://e-trust.gosuslugi.ru/Shared/DownloadCert?thumbprint=' . $link,
         __DIR__ . '/root_certs/' . $link . '.cer'
     );
+    $count++;
 }
 unset($html);
+echo 'Загруженено' . $count . "\n";
 
 echo 'Получение сертификатов акредитованных УЦ' , "\n";
 if(!@mkdir(__DIR__ . '/ca_certs/') && !is_dir(__DIR__ . '/ca_certs/')){
@@ -29,6 +31,7 @@ if(!@mkdir(__DIR__ . '/ca_certs/') && !is_dir(__DIR__ . '/ca_certs/')){
 $xml = file_get_contents('http://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0');
 $ucs = new SimpleXMLElement($xml);
 $now = new DateTime();
+$count = 0;
 
 foreach ($ucs->{'УдостоверяющийЦентр'} as $uc){
     if ((string)$uc->{'СтатусАккредитации'}->{'Статус'} !== 'Действует') {
@@ -48,4 +51,6 @@ foreach ($ucs->{'УдостоверяющийЦентр'} as $uc){
             }
         }
     }
+    $count++;
 }
+echo 'Загруженено' . $count . "\n";
