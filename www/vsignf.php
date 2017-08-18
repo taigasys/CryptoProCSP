@@ -31,7 +31,6 @@ function parseParams($params)
 
     if (isset($output_array[1], $output_array[2])) {
         foreach ($output_array[1] as $i => $row) {
-
             $res[$output_array[1][$i]] = $output_array[2][$i];
         }
     }
@@ -39,6 +38,10 @@ function parseParams($params)
 }
 
 $jsonReply = new lib\JsonReply();
+
+if (file_exists(__DIR__ . 'service.time')) {
+    $jsonReply->sendError('Сервисные работы, попробуйте позже.');
+}
 
 if (!isset($_POST['hash'], $_POST['sign'])) {
     $jsonReply->sendError('Не переданы hash и sign');
