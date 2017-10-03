@@ -88,10 +88,13 @@ try {
     $jsonReply->data->signersMessage = 'Подписанты не найдены';
 }
 
-try {
-    $signersCount = $signers->get_Count();
-} catch (\Exception $e) {
-    $signersCount = 0;
+$signersCount = 0;
+if (null !== $signers) {
+    try {
+        $signersCount = $signers->get_Count();
+    } catch (\Exception $e) {
+        $signersCount = 0;
+    }
 }
 
 if (null !== $signers && $signersCount > 0) {
