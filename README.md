@@ -9,7 +9,15 @@ PHP расширение для работы с подписями через и
 ------------------------
 При установке CryptoPro автоматически выдается лицензия на тестовый период 3 месяца.
 Необходимо установить нормальную лицензию.  
-По лицензированию и докеру можно почитать на форуме https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=12149.
+По лицензированию и докеру можно почитать на форуме https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=12149.  
+Проверка текущей лицензии  
+```
+/opt/cprocsp/sbin/amd64/cpconfig -license -view
+```
+Установка лицензии    
+```
+/opt/cprocsp/sbin/amd64/cpconfig -license -set XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+```
 
 Зачем это нужно
 ---------------
@@ -53,15 +61,21 @@ php-5.6.30.tar.bz2
 Версию можно посмотреть командой php -v  
 
 После чего запускаем сборку докера:  
-```docker build -t cprocsp ./```
+```
+docker build -t cprocsp ./
+```
   
 Если сборка прошла успешно можно запустить командой в каталоге проекта:  
-```run.sh```   
+```
+run.sh
+```   
   
 Спустя 10-15 секунд на http://127.0.0.1:8095 можно посмотреть демо.  
 
 Если что то пошло не так можно войти в контейнер и попытаться это решить:  
-```docker exec -it cprocsp bash```
+```
+docker exec -it cprocsp bash
+```
 
 Корневые сертификаты и сертификаты УЦ
 ----------------------------------------
@@ -71,7 +85,7 @@ php-5.6.30.tar.bz2
 Сертификаты УЦ представлены в реестре http://e-trust.gosuslugi.ru/CA.  
 Там же можно загрузить список в xml представлении http://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0
 
-Установка всех сертификатов в папке с раширением .cer  
+Установка всех сертификатов в папке с расширением .cer  
 ```
 find . -name *.cer -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file {} \;
 ```
@@ -94,7 +108,7 @@ find . -name *.cer -exec /opt/cprocsp/bin/amd64/certmgr -inst -store uroot -file
 /opt/cprocsp/bin/amd64/cryptcp -creatrqst -dn "E=mail@bk.ru, CN=test" -ku -cont '\\.\HDIMAGE\test' -provtype 75 main.req
 ```
 Получившийся файл вставляем в поле "Сохраненный запрос" тут http://www.cryptopro.ru/certsrv/certrqxt.asp и качаем сертификат.  
-Показать содержимое для попирования  
+Показать содержимое для копирования  
 ```
 cat main.req
 ```

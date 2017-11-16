@@ -34,6 +34,10 @@ class ErrorCodes
 
         switch ($errorCode) {
             // Стандартные виндовые коды ошибок
+            case '800B010E'://The revocation process could not continue - the certificate(s) could not be checked.
+                $res = 'Процесс получения цепочки сертификатов не завершён. Подпись не может быть проверена. '
+                . '(нет доступа к интернету для скачивания сертификатов цепочки)';
+                break;
             case '800B010A':
                 $res = 'Не удается построить цепочку сертификатов для доверенного корневого центра';
                 break;

@@ -52,7 +52,7 @@ class CPcertificate
     public function FindPrivateKey () {}
 
     /**
-     * Ниличие приватного ключа в сертификате
+     * Наличие приватного ключа в сертификате
      * Determines whether the certificate has a private key associated with it.
      *
      * @return boolean
@@ -61,7 +61,7 @@ class CPcertificate
 
     /**
      * Собирает цепочку доверия сертификатов
-     * и возвращает обьект CertificateStatus сожержащий статус валидации
+     * и возвращает объект CertificateStatus содержащий статус валидации
      * Builds a certificate verification chain for a certificate and returns a CertificateStatus object
      * that contains the validity status of the certificate.
      *
@@ -71,7 +71,7 @@ class CPcertificate
 
 
     /**
-     * Возвращает объект CPKeyUsage показываеющий валидность ключа сертификата
+     * Возвращает объект CPKeyUsage показывающий валидность ключа сертификата
      * Returns a KeyUsage object that indicates the valid key usage of the certificate.
      *
      * @return CPKeyUsage
@@ -79,7 +79,7 @@ class CPcertificate
     public function KeyUsage () {}
 
     /**
-     * Возвращает объект CPExtendedKeyUsage показываеющий валидность расширенного ключа сертификата
+     * Возвращает объект CPExtendedKeyUsage показывающий валидность расширенного ключа сертификата
      * Returns an CPExtendedKeyUsage object that indicates the valid extended key uses of the certificate.
      * @return CPExtendedKeyUsage
      */
