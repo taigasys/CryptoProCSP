@@ -1,3 +1,9 @@
 <?php
-header('Content-Type: application/json');
-echo '{"state":"0"}';
+$jsonReply = new lib\JsonReply();
+
+if (file_exists(__DIR__ . 'service.time')) {
+    $jsonReply->sendError('Сервисные работы, попробуйте позже.');
+}
+
+$jsonReply->data = 'Ok';
+$jsonReply->sendData();
