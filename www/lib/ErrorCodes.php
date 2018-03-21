@@ -2,8 +2,6 @@
 
 namespace lib;
 
-use stdClass;
-
 /**
  * Class ErrorCodes Транслирует ошибки методов CryptoPRO CSP
  * @package CProCSP
@@ -17,7 +15,7 @@ class ErrorCodes
      */
     public static function formatError($errorCode)
     {
-        return substr(dechex($errorCode), -8);
+        return strtoupper(substr(dechex($errorCode), -8));
     }
 
     /**
@@ -36,7 +34,8 @@ class ErrorCodes
             // Стандартные виндовые коды ошибок
             case '800B010E'://The revocation process could not continue - the certificate(s) could not be checked.
                 $res = 'Процесс получения цепочки сертификатов не завершён. Подпись не может быть проверена. '
-                . '(нет доступа к интернету для скачивания сертификатов цепочки)';
+                . '(нет доступа к интернету для скачивания сертификатов цепочки)'
+                . ' или один из сертификатов цепочки аннулирован';
                 break;
             case '800B010A':
                 $res = 'Не удается построить цепочку сертификатов для доверенного корневого центра';

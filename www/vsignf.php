@@ -76,7 +76,7 @@ try {
     $jsonReply->data->verify = 1;
 } catch (\Exception $e) {
     $jsonReply->data->verify = 0;
-    $jsonReply->data->verifyMessage = ErrorCodes::getMessage($e->getCode(), $e->getMessage());
+    $jsonReply->data->verifyMessage = ErrorCodes::getMessage($e->getCode(), $e->getCode() . '--' . $e->getMessage());
 }
 
 //Получение дополнительных данных
