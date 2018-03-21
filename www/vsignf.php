@@ -140,6 +140,12 @@ if (null !== $signers && $signersCount > 0) {
             } catch (\Exception $e) {
                 $res[$i - 1]['cert']['issuerName'] = '';
             }
+
+            try {
+                $res[$i - 1]['cert']['certSerial'] = parseParams($cert->get_SerialNumber());
+            } catch (\Exception $e) {
+                $res[$i - 1]['cert']['certSerial'] = '';
+            }
         }
     }
 
