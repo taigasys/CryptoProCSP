@@ -1,5 +1,4 @@
 <?php
-//namespace CProCSP;
 use lib\ErrorCodes;
 
 /**
@@ -49,9 +48,6 @@ if (!isset($_POST['hash'], $_POST['sign'])) {
 
 $hash = $_POST['hash'];
 $sign = $_POST['sign'];
-
-//$hash = hash('gost-crypto', file_get_contents(__DIR__ . '/test_certs/732.pdf.sgn'));
-//$sign = file_get_contents(__DIR__ . '/test_certs/732.pdf.sgn');
 
 try {
     /** @var CProCSP\CPHashedData $hd */
@@ -142,7 +138,7 @@ if (null !== $signers && $signersCount > 0) {
             }
 
             try {
-                $res[$i - 1]['cert']['certSerial'] = parseParams($cert->get_SerialNumber());
+                $res[$i - 1]['cert']['certSerial'] = $cert->get_SerialNumber();
             } catch (\Exception $e) {
                 $res[$i - 1]['cert']['certSerial'] = '';
             }
