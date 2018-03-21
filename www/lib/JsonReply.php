@@ -6,6 +6,7 @@ use stdClass;
 
 /**
  * Class JsonReply класс для генерации ответов в формате JSON
+ * 
  * @package CProCSP
  */
 class JsonReply
@@ -23,6 +24,7 @@ class JsonReply
 
     /**
      * Отправляет сообщение об ошибке
+     * 
      * @param int $status Статус ошибки
      * @param string $message текст сообщения
      */

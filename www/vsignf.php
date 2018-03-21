@@ -20,6 +20,7 @@ spl_autoload_register(function ($class) {
 
 /**
  * Разбирает строку параметров в массив
+ * 
  * @param string $params Строка параметров "CN=213, O=123213"
  * @return array
  */

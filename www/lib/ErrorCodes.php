@@ -4,12 +4,12 @@ namespace lib;
 
 /**
  * Class ErrorCodes Транслирует ошибки методов CryptoPRO CSP
- * @package CProCSP
  */
 class ErrorCodes
 {
     /**
      * Приводит число к шестнадцатеричному виду и обрезает до 8ми символов с конца
+     *
      * @param int $errorCode Код ошибки
      * @return string
      */
@@ -20,6 +20,7 @@ class ErrorCodes
 
     /**
      * Возвращает сообщение по коду ошибки
+     *
      * @param int|string $errorCode Код ошибки в виде числа int или строки 800B010A
      * @param bool|string $defaultMessage Сообщение по умолчанию если не найдено по коду
      * @return string
