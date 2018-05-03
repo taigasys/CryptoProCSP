@@ -1,6 +1,6 @@
 <?php
 /**
- * Проверка открепленной подписи
+ * Проверка прикрепленной подписи
  */
 use lib\ErrorCodes;
 
@@ -46,24 +46,15 @@ if (file_exists(__DIR__ . 'service.time')) {
     $jsonReply->sendError('Сервисные работы, попробуйте позже.');
 }
 
-if (!isset($_POST['hash'], $_POST['sign'])) {
-    $jsonReply->sendError('Не переданы hash и sign');
+if (!isset($_POST['sign'])) {
+    $jsonReply->sendError('Не передан sign');
 }
 
-$hash = $_POST['hash'];
 $sign = $_POST['sign'];
-
+file_put_contents('sign.dat', $sign);
 try {
-    /** @var CProCSP\CPHashedData $hd */
-    $hd = new CPHashedData();
-    $hd->set_Algorithm(HASH_ALGORITHM_GOSTR_3411);
-    $hd->SetHashValue($hash);
-
     /** @var CProCSP\CPSignedData $sd */
     $sd = new CPSignedData();
-
-    //Для получения объекта подписи необходимо задать любой контент. Это баг на форуме есть инфа.
-    //https://www.cryptopro.ru/forum2/default.aspx?g=posts&m=78553#post78553
     $sd->set_Content('123');
 
 } catch (\Exception $e) {
@@ -72,7 +63,9 @@ try {
 
 //Проверка подписи
 try {
-    $sd->VerifyHash($hd, $sign, CADES_BES);
+    //$sd->Verify($sign, 0x01, 0); Выдает ошибку Invalid Signature. (0x80090006)
+    // Инфа на форуме https://www.cryptopro.ru/forum2/default.aspx?g=posts&t=12002
+    $sd->VerifyCades($sign, 0x01, 0);
     $jsonReply->data->verify = 1;
 } catch (\Exception $e) {
     $jsonReply->data->verify = 0;
